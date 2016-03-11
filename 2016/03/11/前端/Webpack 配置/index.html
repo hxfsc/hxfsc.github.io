@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>胡师寰的碎碎念</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Webpack 配置&amp;lt;!--
+create time: 2016-03-11 15:02:40
+Author: 
+--&amp;gt;
+package.json123456789cnpm install css-loader style-loader sass-loader node-sass --save-devcnpm install postcss-loadercnpm install autoprefi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="胡师寰的碎碎念">
+<meta property="og:url" content="http://hxfsc.com/2016/03/11/前端/Webpack 配置/index.html">
+<meta property="og:site_name" content="胡师寰的碎碎念">
+<meta property="og:description" content="Webpack 配置&amp;lt;!--
+create time: 2016-03-11 15:02:40
+Author: 
+--&amp;gt;
+package.json123456789cnpm install css-loader style-loader sass-loader node-sass --save-devcnpm install postcss-loadercnpm install autoprefi">
+<meta property="og:updated_time" content="2016-03-11T07:17:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="胡师寰的碎碎念">
+<meta name="twitter:description" content="Webpack 配置&amp;lt;!--
+create time: 2016-03-11 15:02:40
+Author: 
+--&amp;gt;
+package.json123456789cnpm install css-loader style-loader sass-loader node-sass --save-devcnpm install postcss-loadercnpm install autoprefi">
+  
+    <link rel="alternative" href="/atom.xml" title="胡师寰的碎碎念" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars0.githubusercontent.com/u/833242?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Hu.Shihuan</a></h1>
+		</hgroup>
+
+		
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Hu.Shihuan</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://avatars0.githubusercontent.com/u/833242?v=3&amp;s=460" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Hu.Shihuan</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-前端/Webpack 配置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/11/前端/Webpack 配置/" class="article-date">
+  	<time datetime="2016-03-11T07:20:36.000Z" itemprop="datePublished">2016-03-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Webpack_配置">Webpack 配置</h1><!--
+create time: 2016-03-11 15:02:40
+Author: <TODO: 胡师寰>
+-->
+<h3 id="package-json">package.json</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cnpm install css-loader style-loader sass-loader node-sass --save-dev</span><br><span class="line">cnpm install postcss-loader</span><br><span class="line">cnpm install autoprefixer-loader</span><br><span class="line">cnpm install precss-loader</span><br><span class="line">cnpm install babel-loader --save-dev</span><br><span class="line">cnpm install babel-preset-es2015 babel-preset-react --save-dev</span><br><span class="line">cnpm install react react-dom --save</span><br><span class="line">cnpm install bootstrap@<span class="number">4.0</span><span class="number">.0</span>-alpha<span class="number">.2</span> --save-dev</span><br><span class="line">cnpm install url-loader --save-dev</span><br></pre></td></tr></table></figure>
+<h3 id="webpack-config-js">webpack.config.js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>( <span class="string">'path'</span> );</span><br><span class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>( <span class="string">'webpack'</span> );</span><br><span class="line"><span class="keyword">var</span> autoprefixer = <span class="built_in">require</span>(<span class="string">'autoprefixer'</span>);</span><br><span class="line"><span class="keyword">var</span> precss       = <span class="built_in">require</span>(<span class="string">'precss'</span>);</span><br><span class="line"><span class="comment">//当前项目地址</span></span><br><span class="line"><span class="keyword">var</span> ROOT_PATH = path.resolve( __dirname );</span><br><span class="line"><span class="comment">//开发目录</span></span><br><span class="line"><span class="keyword">var</span> APP_PATH = path.resolve( ROOT_PATH, <span class="string">'./src'</span> );</span><br><span class="line"><span class="comment">//生成目录</span></span><br><span class="line"><span class="keyword">var</span> BUILD_PATH = path.resolve( ROOT_PATH, <span class="string">'./build'</span> );</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry:&#123;</span><br><span class="line">        app: path.resolve( APP_PATH,<span class="string">'./index.js'</span> )</span><br><span class="line">    &#125;,</span><br><span class="line">    output:&#123;</span><br><span class="line">        path : BUILD_PATH,</span><br><span class="line">        filename : <span class="string">'bundle.js'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    devtool: <span class="string">"eval-source-map"</span>,</span><br><span class="line">    <span class="built_in">module</span> : &#123;</span><br><span class="line">        loaders:[&#123;</span><br><span class="line">                <span class="comment">//处理SCSS</span></span><br><span class="line">                test: <span class="regexp">/\.scss$/</span>,</span><br><span class="line">                loader: <span class="string">"style-loader!css-loader!sass-loader!postcss-loader"</span>,</span><br><span class="line">                include: APP_PATH</span><br><span class="line">            &#125;,&#123;</span><br><span class="line">                <span class="comment">//处理JSX</span></span><br><span class="line">                test : <span class="regexp">/\.jsx?$/</span>,</span><br><span class="line">                loader : <span class="string">'babel'</span>,</span><br><span class="line">                include : APP_PATH,</span><br><span class="line">                query: &#123;</span><br><span class="line">                    presets: [<span class="string">'es2015'</span>, <span class="string">'react'</span>]</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,&#123;</span><br><span class="line">                test: <span class="regexp">/\.(png|jpg)$/</span>,</span><br><span class="line">                loader: <span class="string">'url?limit=400000'</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    postcss: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> [autoprefixer, precss];</span><br><span class="line">    &#125;,</span><br><span class="line">    resolve: &#123;</span><br><span class="line">        extensions: [<span class="string">''</span>, <span class="string">'.js'</span>, <span class="string">'.jsx'</span>,<span class="string">'.scss'</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="运行webpack">运行webpack</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo webpack</span><br></pre></td></tr></table></figure>
+<h3 id="监控webpack">监控webpack</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo webpack -w</span><br></pre></td></tr></table></figure>
+<h3 id="压缩JavaScript">压缩JavaScript</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo webpack -p</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/11/PHP/安装LNMP提示 proc_open错误/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/15/前端/jQuery在Firefox不支持background-position-x解决办法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Hu.Shihuan
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-25285383-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

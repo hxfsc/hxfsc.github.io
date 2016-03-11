@@ -5,43 +5,22 @@
   
   <title>胡师寰的碎碎念</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Rails 数据交互
-ActiveRecord创建模型
-rails generate model user userName:string email:string
-
-创建的model使用的是单数 而创建 controller 则用复数
-
-迁移数据
-rake db:migrate
-进入控制台 rails console
-@user = User.new(:userName =&amp;gt; &apos;Hu.Sh">
+  <meta name="description" content="安装LNMP提示 proc_open错误在lnmp环境下安装Laravel提示错误
+The Process class relies on proc_open, which is not available on your PHP installation.
+到 /usr/local/php/etc/php.ini 寻找 disable_functions 字段 然后删除 scandir 字段即可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="胡师寰的碎碎念">
-<meta property="og:url" content="http://hxfsc.com/2015/11/15/Rails 数据交互/index.html">
+<meta property="og:url" content="http://hxfsc.com/2016/03/11/PHP/安装LNMP提示 proc_open错误/index.html">
 <meta property="og:site_name" content="胡师寰的碎碎念">
-<meta property="og:description" content="Rails 数据交互
-ActiveRecord创建模型
-rails generate model user userName:string email:string
-
-创建的model使用的是单数 而创建 controller 则用复数
-
-迁移数据
-rake db:migrate
-进入控制台 rails console
-@user = User.new(:userName =&amp;gt; &apos;Hu.Sh">
-<meta property="og:updated_time" content="2015-11-09T20:32:14.000Z">
+<meta property="og:description" content="安装LNMP提示 proc_open错误在lnmp环境下安装Laravel提示错误
+The Process class relies on proc_open, which is not available on your PHP installation.
+到 /usr/local/php/etc/php.ini 寻找 disable_functions 字段 然后删除 scandir 字段即可">
+<meta property="og:updated_time" content="2015-11-21T20:07:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="胡师寰的碎碎念">
-<meta name="twitter:description" content="Rails 数据交互
-ActiveRecord创建模型
-rails generate model user userName:string email:string
-
-创建的model使用的是单数 而创建 controller 则用复数
-
-迁移数据
-rake db:migrate
-进入控制台 rails console
-@user = User.new(:userName =&amp;gt; &apos;Hu.Sh">
+<meta name="twitter:description" content="安装LNMP提示 proc_open错误在lnmp环境下安装Laravel提示错误
+The Process class relies on proc_open, which is not available on your PHP installation.
+到 /usr/local/php/etc/php.ini 寻找 disable_functions 字段 然后删除 scandir 字段即可">
   
     <link rel="alternative" href="/atom.xml" title="胡师寰的碎碎念" type="application/atom+xml">
   
@@ -148,11 +127,11 @@ rake db:migrate
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-Rails 数据交互" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-PHP/安装LNMP提示 proc_open错误" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/15/Rails 数据交互/" class="article-date">
-  	<time datetime="2015-11-14T20:00:28.000Z" itemprop="datePublished">2015-11-15</time>
+      <a href="/2016/03/11/PHP/安装LNMP提示 proc_open错误/" class="article-date">
+  	<time datetime="2016-03-11T07:21:07.000Z" itemprop="datePublished">2016-03-11</time>
 </a>
     </div>
   
@@ -163,29 +142,10 @@ rake db:migrate
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Rails_数据交互">Rails 数据交互</h1><hr>
-<p><strong>ActiveRecord</strong><br><em>创建模型</em></p>
-<pre><code>rails generate model <span class="keyword">user</span> <span class="title">userName</span>:<span class="type">string</span> email:<span class="type">string</span>
-</code></pre><blockquote>
-<p>创建的<code>model</code>使用的是单数 而创建 <code>controller</code> 则用复数</p>
-</blockquote>
-<p><strong>迁移数据</strong></p>
-<pre><code><span class="tag">rake</span> <span class="tag">db</span><span class="pseudo">:migrate</span>
-</code></pre><p><strong>进入控制台</strong> <code>rails console</code></p>
-<pre><code>@user = User.<span class="function"><span class="title">new</span><span class="params">(:userName =&gt; <span class="string">'Hu.Shihuan'</span>, :email =&gt; <span class="string">'hxfsc@qq.com'</span>)</span></span>
+        <h1 id="安装LNMP提示_proc_open错误">安装LNMP提示 proc_open错误</h1><p>在lnmp环境下安装Laravel提示错误</p>
+<pre><code>The Process <span class="type">class</span> relies <span class="function_start"><span class="keyword">on</span></span> proc_open, which <span class="keyword">is</span> <span class="keyword">not</span> available <span class="function_start"><span class="keyword">on</span></span> your PHP installation.
+</code></pre><p>到 <code>/usr/local/php/etc/php.ini</code> 寻找 <code>disable_functions</code> 字段 然后删除 <code>scandir</code> 字段即可 </p>
 
-@user.<span class="function"><span class="title">save</span><span class="params">()</span></span>
-
-User.<span class="function"><span class="title">find</span><span class="params">(<span class="number">1</span>)</span></span>
-
-User.<span class="function"><span class="title">all</span><span class="params">()</span></span>
-</code></pre><p><strong>数据验证</strong></p>
-<pre><code><span class="string">validates :</span>userName, <span class="string">presence:</span><span class="literal">true</span>, <span class="string">length:</span>{<span class="string">maximun:</span><span class="number">20</span>}   存在性验证,长度不能大于<span class="number">20</span>
-EMAIL = <span class="regexp">/+@/</span>i  <span class="comment">//邮箱验证</span>
-<span class="string">validates:</span>email, <span class="string">presence:</span><span class="literal">true</span>，length{<span class="string">maximun:</span><span class="number">255</span>}，<span class="string">format:</span>{<span class="string">with:</span>EMAIL},<span class="string">uniquenese:</span>{ <span class="keyword">case</span>\<span class="string">_sensitive:</span> <span class="literal">false</span>} | <span class="literal">true</span>  存在性验证,长度不能大于<span class="number">255</span>,正则匹配，唯一性验证[不加case_sensitive 则为大小写不敏感]
-</code></pre><p><strong>查看错误信息</strong></p>
-<pre><code>@user<span class="class">.errors</span><span class="class">.full_message</span>
-</code></pre>
       
     </div>
     
@@ -194,17 +154,8 @@ EMAIL = <span class="regexp">/+@/</span>i  <span class="comment">//邮箱验证<
     
 <nav id="article-nav">
   
-    <a href="/2015/11/15/前端/jQuery在Firefox不支持background-position-x解决办法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/11/15/Rails开始/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/03/11/前端/Webpack 配置/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"></div>
       <strong class="article-nav-caption">></strong>
     </a>
