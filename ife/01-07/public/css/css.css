@@ -197,13 +197,56 @@ a, a:hover {
   user-select: none; }
 
 /*page style*/
+#nav {
+  height: 56px;
+  line-height: 56px;
+  background: #FFF; }
+  #nav .nav-inner {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden; }
+    #nav .nav-inner h1 {
+      display: block;
+      background: url(../images/logo.png) no-repeat left center;
+      padding-left: 50px;
+      font-size: 21px;
+      color: #3a3a3a;
+      float: left; }
+    #nav .nav-inner .nav-list {
+      float: right;
+      width: 561px; }
+      #nav .nav-inner .nav-list ul {
+        float: left; }
+        #nav .nav-inner .nav-list ul li {
+          float: left;
+          height: 56px; }
+          #nav .nav-inner .nav-list ul li a {
+            color: #797b83;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 0 20px; }
+          #nav .nav-inner .nav-list ul li.active a {
+            border-bottom: 2px solid #e7504d; }
+      #nav .nav-inner .nav-list #login {
+        display: block;
+        background: url(../images/login.png) no-repeat left center;
+        padding-left: 25px;
+        float: right;
+        color: #e7504d;
+        font-size: 14px;
+        margin-left: 10px; }
+
 #header {
   background: url(../images/header-bg.jpg) no-repeat;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled', sizingMethod='scale' , src='http://hxfsc.com/ife/01-07/public/images/header-bg.jpg');
   background-size: cover;
   height: 690px; }
   #header #header-text {
     color: #FFF;
-    width: 1100px;
+    width: 1000px;
     margin: 0 auto;
     padding-top: 220px; }
     #header #header-text h2 {
@@ -230,12 +273,12 @@ a, a:hover {
     height: 250px;
     padding-top: 45px; }
     .section#bannar-intro .section-inner {
-      width: 1100px;
+      width: 1000px;
       margin: 0 auto; }
       .section#bannar-intro .section-inner dl {
         float: left;
         position: relative;
-        width: 275px; }
+        width: 250px; }
         .section#bannar-intro .section-inner dl dt {
           text-align: center; }
           .section#bannar-intro .section-inner dl dt i {
@@ -285,6 +328,7 @@ a, a:hover {
   .section#address-box {
     background: url(../images/adds-bg.jpg) no-repeat;
     background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled', sizingMethod='scale' , src='http://hxfsc.com/ife/01-07/public/images/adds-bg.jpg');
     height: 340px;
     text-align: center;
     color: #FFF; }
@@ -306,16 +350,16 @@ a, a:hover {
       font-size: 12px;
       padding-top: 20px; }
     .section#address-box .address-formbox {
-      width: 1030px;
+      width: 1000px;
       margin: 0 auto;
       margin-top: 40px; }
       .section#address-box .address-formbox .address-formbox-inner {
-        width: 1200px; }
+        width: 1000px; }
         .section#address-box .address-formbox .address-formbox-inner .address-form-item {
           position: relative;
-          width: 237.5px;
+          width: 230px;
           height: 36px;
-          margin-right: 27px;
+          margin-right: 20px;
           float: left; }
           .section#address-box .address-formbox .address-formbox-inner .address-form-item span.drop-icon {
             background: url(../images/icon.png) no-repeat -363px -220px;
@@ -331,6 +375,7 @@ a, a:hover {
             top: 0;
             border: 1px solid #e3d6cc;
             width: 100%;
+            *width: 220px;
             height: 34px;
             line-height: 34px;
             padding-left: 10px;
@@ -352,7 +397,7 @@ a, a:hover {
             position: absolute;
             top: 33px;
             left: 0px;
-            width: 100%;
+            width: 230px;
             background: #e3e3e4;
             border: 1px solid #c16e5f;
             border-top: none;
@@ -437,7 +482,8 @@ a, a:hover {
       width: 66.66%;
       height: 565px;
       background: url(../img/scroll-thumb.jpg) no-repeat left center;
-      background-size: cover; }
+      background-size: cover;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled', sizingMethod='scale' , src='http://hxfsc.com/ife/01-07/public/img/scroll-thumb.jpg'); }
     .section#scroll-box #scroll-box-text {
       width: clac(33.34)%;
       float: left;
@@ -492,7 +538,9 @@ a, a:hover {
     padding-top: 160px;
     float: left; }
     .section#section-tab .section-tab-item .section-tab-item-content {
-      text-align: center; }
+      text-align: center;
+      padding-bottom: 20px;
+      position: relative; }
       .section#section-tab .section-tab-item .section-tab-item-content h3 {
         color: #FFF;
         font-weight: normal;
@@ -507,6 +555,16 @@ a, a:hover {
         padding: 8px 40px;
         border: 1px solid #FFF;
         font-size: 20px; }
+      .section#section-tab .section-tab-item .section-tab-item-content i.arrow {
+        background: url(../images/arrow.png) no-repeat;
+        display: block;
+        width: 25px;
+        height: 30px;
+        position: absolute;
+        right: -25px;
+        top: 50%;
+        margin-top: -15px;
+        z-index: 9999; }
       .section#section-tab .section-tab-item .section-tab-item-content hr {
         width: 30px;
         margin: 0 auto;
@@ -571,35 +629,32 @@ a, a:hover {
             margin-right: 5px; }
     .section #wish-form-box .wish-contact {
       width: 650px;
+      overflow: hidden;
       float: right; }
       .section #wish-form-box .wish-contact label {
         font-weight: bold; }
       .section #wish-form-box .wish-contact .wish-contact-dleft {
-        width: 312px;
-        height: 230px; }
-        .section #wish-form-box .wish-contact .wish-contact-dleft label {
-          color: #231916;
-          padding-left: 10px;
-          font-size: 12px;
-          margin-bottom: 20px;
-          display: block; }
-        .section #wish-form-box .wish-contact .wish-contact-dleft #username {
-          padding-bottom: 20px; }
-          .section #wish-form-box .wish-contact .wish-contact-dleft #username input {
+        width: 700px; }
+        .section #wish-form-box .wish-contact .wish-contact-dleft .contact-item-input {
+          padding-bottom: 20px;
+          float: left;
+          margin-right: 20px; }
+          .section #wish-form-box .wish-contact .wish-contact-dleft .contact-item-input input {
             border: none;
             background: #ededee;
-            width: 300px;
-            padding-left: 10px;
+            width: 295px;
+            padding-left: 15px;
             height: 40px;
             line-height: 40px; }
         .section #wish-form-box .wish-contact .wish-contact-dleft textarea {
-          height: 100px;
-          width: 310px;
-          border: none; }
+          height: 84px;
+          width: 610px;
+          padding: 8px 15px;
+          border: none;
+          background: #ededee; }
       .section #wish-form-box .wish-contact .wish-contact-dright {
         padding-left: 22px;
-        width: 290px;
-        height: 230px; }
+        width: 290px; }
         .section #wish-form-box .wish-contact .wish-contact-dright div {
           padding-bottom: 8px; }
           .section #wish-form-box .wish-contact .wish-contact-dright div input {
@@ -607,15 +662,25 @@ a, a:hover {
             height: 30px;
             line-height: 30px;
             padding-left: 10px;
-            border: none; }
+            border: none;
+            background: #ededee; }
       .section #wish-form-box .wish-contact .submit-box {
-        text-align: center; }
+        text-align: center;
+        clear: both;
+        overflow: hidden;
+        zoom: 1; }
         .section #wish-form-box .wish-contact .submit-box input {
-          background: none;
+          background: #ededee;
           border: none;
           text-align: center;
           font-size: 14px;
-          cursor: pointer; }
+          color: #333333;
+          font-weight: bold;
+          cursor: pointer;
+          width: 640px;
+          margin: 20px 0 0 0;
+          display: block;
+          height: 38px; }
 
 #footer {
   height: 415px;
@@ -689,7 +754,7 @@ a, a:hover {
     height: 60px;
     background: #303039; }
     #footer .footer-copyright .copyright-inner {
-      width: 1100px;
+      width: 1000px;
       margin: 0 auto;
       height: 60px;
       line-height: 60px; }

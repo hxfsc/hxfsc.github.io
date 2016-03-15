@@ -3,15 +3,74 @@
 /*page style*/
 
 $white : #FFF;
+$screenWidth: 1000px;
+
+#nav{
+	height: 56px;
+	line-height: 56px;
+	background: #FFF;
+
+	.nav-inner{
+		width: $screenWidth;
+		margin: 0 auto;
+		overflow: hidden;
+		h1{ 
+			display: block; 
+			background: url(../images/logo.png) no-repeat left center;
+			padding-left: 50px;
+			font-size: 21px;
+			color: #3a3a3a;
+			float: left;
+		}
+		.nav-list{
+			float: right;
+			width: 470px+56+35;
+
+			ul{
+				float: left;
+				li{ 
+					float: left;
+					height: 56px;
+					a{
+						color: #797b83;
+						font-size: 14px;
+						display: block;
+						width: 100%;
+						height: 100%;
+						box-sizing: border-box;
+						padding: 0 20px;
+
+					}
+					&.active{
+						a{
+							border-bottom: 2px solid #e7504d;
+						}
+					}
+				}
+			}
+
+			#login{
+				display: block;
+				background: url(../images/login.png) no-repeat left center;
+				padding-left: 25px;
+				float: right;
+				color: #e7504d;
+				font-size: 14px;
+				margin-left: 10px;
+			}
+		}
+	}
+}
 
 #header{ 
 	background: url(../images/header-bg.jpg) no-repeat;  
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled', sizingMethod='scale' , src='http://hxfsc.com/ife/01-07/public/images/header-bg.jpg');
 	background-size: cover; 
 	height: 690px; 
 
 	#header-text{
 		color: $white;
-		width: 1100px;
+		width: $screenWidth;
 		margin: 0 auto;
 		padding-top: 220px;
 		
@@ -48,13 +107,13 @@ $white : #FFF;
 		height: 250px;
 		padding-top: 45px;
 		.section-inner{
-			width: 1100px;
+			width: $screenWidth;
 			margin: 0 auto;
 
 			dl{
 				float: left;
 				position: relative;
-				width: (1100px /4);
+				width: ($screenWidth /4);
 				
 				dt{
 					text-align: center;
@@ -125,9 +184,11 @@ $white : #FFF;
 	&#address-box{
 		background: url(../images/adds-bg.jpg) no-repeat;
 		background-size: cover;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled', sizingMethod='scale' , src='http://hxfsc.com/ife/01-07/public/images/adds-bg.jpg');
 		height: 340px;
 		text-align: center;
 		color: #FFF;
+
 		h3{
 			padding-top: 50px;
 			height: 21px;
@@ -150,16 +211,16 @@ $white : #FFF;
 			padding-top: 20px;
 		}
 		.address-formbox{
-			width: 1030px;
+			width: $screenWidth;
 			margin: 0 auto;
 			margin-top: 40px;
 			.address-formbox-inner{
-				width: 1200px;
+				width: ($screenWidth / 4 )*4;
 				.address-form-item{
 					position: relative;
-					width: (1030px / 4 ) - 20;
+					width: ($screenWidth / 4 )-20;
 					height: 36px;
-					margin-right: 27px;
+					margin-right: 20px;
 					float: left;
 					span{
 						&.drop-icon{
@@ -178,6 +239,7 @@ $white : #FFF;
 						top: 0;
 						border: 1px solid #e3d6cc;
 						width: 100%;
+						*width: 220px;
 						height: 34px;
 						line-height: 34px;
 						padding-left: 10px;
@@ -202,7 +264,7 @@ $white : #FFF;
 						position: absolute;
 						top: 33px;
 						left: 0px;
-						width: 100%;
+						width: 230px;
 						background: #e3e3e4;
 						border: 1px solid #c16e5f;
 						border-top: none;
@@ -325,6 +387,7 @@ $white : #FFF;
 			height: 565px;
 			background: url(../img/scroll-thumb.jpg) no-repeat left center;
 			background-size: cover;
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled', sizingMethod='scale' , src='http://hxfsc.com/ife/01-07/public/img/scroll-thumb.jpg');
 		}
 
 		#scroll-box-text{
@@ -407,6 +470,8 @@ $white : #FFF;
 			float: left;
 			.section-tab-item-content{
 				text-align: center;
+				padding-bottom: 20px;
+				position: relative;
 				h3{
 					color: #FFF;
 					font-weight: normal;
@@ -423,6 +488,21 @@ $white : #FFF;
 					padding: 8px 40px;
 					border: 1px solid #FFF;
 					font-size: 20px;
+				}
+
+				i{
+					&.arrow{
+						background: url(../images/arrow.png) no-repeat;
+						display: block;
+						width: 25px;
+						height: 30px;
+						position: absolute;
+						right: -25px;
+						top: 50%;
+						margin-top: -15px;
+						z-index: 9999;
+					}
+					
 				}
 
 				hr{
@@ -486,7 +566,7 @@ $white : #FFF;
 	}
 
 	#wish-form-box{
-		width: 1000px;
+		width: $screenWidth;
 		margin: 0 auto;
 		overflow: hidden;
 		zoom: 1;
@@ -522,28 +602,24 @@ $white : #FFF;
 		}
 
 		.wish-contact{
-			width: 1000px-350;
+			width:$screenWidth - 350;
+			overflow: hidden;
 			float: right;
 			label{
 				font-weight: bold;
 			}
 			.wish-contact-dleft{
-				width: 312px;
-				height: 230px;
-				label{
-					color: #231916;
-					padding-left: 10px;
-					font-size: 12px;
-					margin-bottom: 20px;
-					display: block;
-				}
-				#username{
+				width: 700px;
+				
+				.contact-item-input{
 					padding-bottom: 20px;
+					float: left;
+					margin-right: 20px;
 					input{
 						border: none;
 						background: #ededee;
-						width: 300px;
-						padding-left: 10px;
+						width: 300px-5;
+						padding-left: 15px;
 						height: 40px;
 						line-height: 40px;
 					}
@@ -551,17 +627,17 @@ $white : #FFF;
 				}
 
 				textarea{
-					height: 100px;
-					width: 310px;
+					height: 100px-16;
+					width: 310px*2+20-30;
+					padding: 8px 15px;
 					border: none;
+					background: #ededee;
 				}
 			}
 
 			.wish-contact-dright{
 				padding-left: 22px;
 				width: 290px;
-				height: 230px;
-				
 				div{
 					padding-bottom: 8px;
 
@@ -571,17 +647,27 @@ $white : #FFF;
 						line-height: 30px;
 						padding-left: 10px;
 						border: none;
+						background: #ededee;
 					}
 				}
 			}
 			.submit-box{
 				text-align: center;
+				clear: both;
+				overflow: hidden;
+				zoom: 1;
 				input{
-					background: none;
+					background: #ededee;
 					border: none;
 					text-align: center;
 					font-size: 14px;
+					color: #333333;
+					font-weight: bold;
 					cursor: pointer;
+					width: 310px*2+20;
+					margin: 20px 0 0 0;
+					display: block;
+					height: 38px;
 
 				}
 			}
@@ -687,13 +773,12 @@ $white : #FFF;
 		background: #303039;
 
 		.copyright-inner{
-			width: 1100px;
+			width: $screenWidth;
 			margin: 0 auto;
 			height: 60px;
 			line-height: 60px;
 			p{
 				color: #FFF;
-
 				&.f-fr{
 					cursor: pointer;
 				}
