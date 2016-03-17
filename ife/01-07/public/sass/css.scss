@@ -333,16 +333,17 @@ $screenWidth: 1000px;
 				.products-title{
 					width: 80%;
 					margin: 0 auto;
-					text-align: justify;
-					text-align-last:justify;
 					a{
 						display: block;
 						font-weight: bold;
 						font-size: 16px;
-						text-align: justify;
-						text-align-last:justify;
 						width: 100%;
 						color: #666;
+						i{
+							display: inline-block;
+							width: 40px;
+
+						}
 					}
 				}
 			}

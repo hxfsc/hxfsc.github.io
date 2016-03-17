@@ -445,17 +445,16 @@ a, a:hover {
           left: 0; }
         .section#products dl.products-big .products-title {
           width: 80%;
-          margin: 0 auto;
-          text-align: justify;
-          text-align-last: justify; }
+          margin: 0 auto; }
           .section#products dl.products-big .products-title a {
             display: block;
             font-weight: bold;
             font-size: 16px;
-            text-align: justify;
-            text-align-last: justify;
             width: 100%;
             color: #666; }
+            .section#products dl.products-big .products-title a i {
+              display: inline-block;
+              width: 40px; }
       .section#products dl dt {
         width: 200px;
         height: 310px;
