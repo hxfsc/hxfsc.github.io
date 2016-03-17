@@ -44,6 +44,7 @@ $screenWidth: 1000px;
 					&.active{
 						a{
 							border-bottom: 2px solid #e7504d;
+							*height: 54px;
 						}
 					}
 				}
@@ -421,6 +422,7 @@ $screenWidth: 1000px;
 				}
 
 				.scroll-box-content-item{
+					padding-bottom:20px;
 					text-align: center;
 					p{
 						text-align: left;
@@ -540,6 +542,7 @@ $screenWidth: 1000px;
 			&.section-tab-item-thr{
 				background: url(../img/section-tab-item-thr.jpg) no-repeat;
 				background-size: cover;
+				filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='Enabled', sizingMethod='scale' , src='http://hxfsc.com/ife/01-07/public/img/section-tab-item-thr.jpg');
 			}
 		}
 	}
