@@ -43,18 +43,6 @@ function findTag( elem, tag ){
 	return elem.getElementsByTagName( tag );
 }
 
-function findChildren( parent, elem ){
-	var children;
-	if( parent.children.length > 0 ){
-		children = parent.children;
-		for( var i = 0; i < children.length; i++ ){
-			if( children[i].nodeName.toLowerCase() == elem ){
-				return children[i].children;
-			}
-		} 
-	}
-	
-}
 
 
 /**
