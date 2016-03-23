@@ -1,11 +1,10 @@
-<!DOCTYPE>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>IFE JavaScript Task 01</title>
-  </head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Document</title>
+</head>
 <body>
-
   <ul id="source">
     <li>北京空气质量：<b>90</b></li>
     <li>上海空气质量：<b>70</b></li>
@@ -81,9 +80,8 @@ function getData() {
 function sortAqiData(data) {
 	
 	data.sort(function(a,b){
-		return a>b;
-	})
-	
+		return a[0] - b[0];
+	});
 	return data;
 
 }
@@ -112,10 +110,21 @@ getData();
 }
 
 
-function init() {
+var EventUtil = {
+    addHandle : function( element, type, handle ){
+      if( element.addEventListener ){
+        element.addEventListener( type, handle, false );
+      }else if( element.attachEvent ){
+        element.attachEvent( 'on' + type, handle );
+      }else{
+        element[ 'on' + type ] = handle;
+      }
+    }
+};
 
+function init() {
   // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
-  $("sort-btn").addEventListener("click", btnHandle);
+  EventUtil.addHandle( $("sort-btn"), 'click', btnHandle );
 
 }
 
