@@ -1,6 +1,6 @@
     /**
      * 简单的选择器
-     * 
+     *
      */
 
     function $( element ){
@@ -44,7 +44,7 @@ var _sortData = [];
  * 然后渲染aqi-list列表，增加新增的数据
  */
 function addAqiData() {
-    
+
     var _apiData = {};
     var city = $("aqi-city-input").value;
     city = city.trim( city );
@@ -58,27 +58,27 @@ function addAqiData() {
         alert("空气质量指数必须为整数");
         return false;
     }
-   
+
     _apiData[ city ] = airApi;
     //排序
-    
+
     for( var i in _apiData ){
         _sortData.push( { api : _apiData[ i ], city : i } );
     }
-    
-    
-   
+
+
+
     _sortData.sort( function( a, b ){
         return b.api - a.api;
     });
-    
-    
+
+
     var apiData= {};
     delete apiDatal
     for( var i = 0; i < _sortData.length; i++ ){
         apiData[_sortData[i].city] = _sortData[i].api;
     }
-    
+
 
     sortData = apiData;
     return apiData;
@@ -103,11 +103,11 @@ function renderAqiList( data ) {
         } else{
             $("aqi-table").innerHTML = "";
         }
-        
-        
+
+
     }
-    
-   
+
+
 }
 
 /**
@@ -131,7 +131,7 @@ function delBtnHandle( city ) {
             _sortData.splice(i,1);
       }
   }
-  
+
   renderAqiList( sortData );
 }
 
@@ -139,9 +139,9 @@ function init() {
 
   // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
 
-  
+
   EventUtil.addListerHandler( $("add-btn"),"click", addBtnHandle );
-  
+
   // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
 
 }
@@ -156,4 +156,3 @@ window.onload = function(){
 
     init();
 }
-
