@@ -101,8 +101,6 @@ function renderAqiList( data ) {
         } else{
             $("aqi-table").innerHTML = "";
         }
-
-
     }
 
 
