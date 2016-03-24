@@ -92,7 +92,7 @@ function addAqiData() {
 function renderAqiList( data ) {
     if( data != false ){
         var _tableTemplate = [];
-        _tableTemplate.push("<tr class="\"thead\""><td>城市</td><td>空气质量</td><td>操作</td></tr>");
+        _tableTemplate.push("<tr class="thead"><td>城市</td><td>空气质量</td><td>操作</td></tr>");
         for (var i in data) {
             _tableTemplate.push("<tr><td>" + i + "</td><td>" + data[i] + "</td><td class="del" onclick="\"delBtnHandle('"" +="" i="" "')\"="">删除</td></tr>");
         }
