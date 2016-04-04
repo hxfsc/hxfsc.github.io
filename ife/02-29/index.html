@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务二十九：表单（一）单个表单项的检验</title>
+</head>
+<body>
+	<style>
+		*{ margin: 0; padding: 0; outline: none; font-size: 12px; }
+		#container{ width: 370px; margin: 0 auto; padding-top: 100px; }
+		#verification-text{ width: 180px; padding-left: 10px; height: 28px; line-height: 28px; border: 1px solid #337ab7; }
+		#verification-submit-btn{ width: 100px; border: none; height: 30px; line-height: 30px; text-align: center;background-color: #337ab7; color: #FFF; }
+		#verification-submit-btn:hover{ background: #69B769; }
+		#container label{ float: left; padding-right: 20px; width: 50px; display: block; height: 30px; line-height: 30px; text-align: right; }
+		#container p{ padding-left: 70px; padding-top: 10px; color: #9E7F7F; }
+	</style>
+	<div id="container">
+		<label>姓名:</label>
+		<form action="#" onsubmit="return false;">
+			<input type="text" name="" id="verification-text">
+			<button type="button" id="verification-submit-btn">验证</button>
+			<p>必填，长度为4~16个字符</p>
+		</form>
+	</div>
+</body>
+<script src="./task-29.js"></script>
+</html>
