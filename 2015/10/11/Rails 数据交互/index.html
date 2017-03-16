@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016/3 | 胡师寰</title>
+  <title>Rails 数据交互 | 胡师寰</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -73,7 +73,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -166,37 +166,69 @@
 
         
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/03/11/前端/Webpack 配置/">Webpack 配置</a></h4>
-                            
-                            <p><time datetime="2016-03-11T07:02:40.000Z"><a href="/2016/03/11/前端/Webpack 配置/">2016-03-11</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-10-10T19:44:25.000Z" itemprop="datePublished">
+          2015-10-11
+      </time>
+    
+    
+    | 
+    <a href='/tags/Ruby-on-Rails/'>Ruby on Rails</a>
+    
+    
+</span>
+                <h1>Rails 数据交互</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="Rails_数据交互">Rails 数据交互</h1><hr>
+<p><strong>ActiveRecord</strong><br><em>创建模型</em></p>
+<pre><code>rails generate model <span class="keyword">user</span> <span class="title">userName</span>:<span class="type">string</span> email:<span class="type">string</span>
+</code></pre><blockquote>
+<p>创建的<code>model</code>使用的是单数 而创建 <code>controller</code> 则用复数</p>
+</blockquote>
+<p><strong>迁移数据</strong></p>
+<pre><code><span class="tag">rake</span> <span class="tag">db</span><span class="pseudo">:migrate</span>
+</code></pre><p><strong>进入控制台</strong> <code>rails console</code></p>
+<pre><code>@user = User.<span class="function"><span class="title">new</span><span class="params">(:userName =&gt; <span class="string">'Hu.Shihuan'</span>, :email =&gt; <span class="string">'hxfsc@qq.com'</span>)</span></span>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+@user.<span class="function"><span class="title">save</span><span class="params">()</span></span>
+
+User.<span class="function"><span class="title">find</span><span class="params">(<span class="number">1</span>)</span></span>
+
+User.<span class="function"><span class="title">all</span><span class="params">()</span></span>
+</code></pre><p><strong>数据验证</strong></p>
+<pre><code><span class="string">validates :</span>userName, <span class="string">presence:</span><span class="literal">true</span>, <span class="string">length:</span>{<span class="string">maximun:</span><span class="number">20</span>}   存在性验证,长度不能大于<span class="number">20</span>
+EMAIL = <span class="regexp">/+@/</span>i  <span class="comment">//邮箱验证</span>
+<span class="string">validates:</span>email, <span class="string">presence:</span><span class="literal">true</span>，length{<span class="string">maximun:</span><span class="number">255</span>}，<span class="string">format:</span>{<span class="string">with:</span>EMAIL},<span class="string">uniquenese:</span>{ <span class="keyword">case</span>\<span class="string">_sensitive:</span> <span class="literal">false</span>} | <span class="literal">true</span>  存在性验证,长度不能大于<span class="number">255</span>,正则匹配，唯一性验证[不加case_sensitive 则为大小写不敏感]
+</code></pre><p><strong>查看错误信息</strong></p>
+<pre><code>@user<span class="class">.errors</span><span class="class">.full_message</span>
+</code></pre>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2015/11/22/PHP/安装LNMP提示 proc_open错误/" style="float: left;">
+        ← 安装LNMP提示 proc_open错误
+    </a>
+    
+    
+    <a class="pull-right" href="/2015/10/11/Rails开始/">
+        Rails开始 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo"></div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

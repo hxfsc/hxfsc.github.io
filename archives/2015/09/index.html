@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>胡师寰</title>
+  <title>Archives: 2015/9 | 胡师寰</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -43,17 +43,6 @@
     <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
     <![endif]-->
 
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <![endif]-->
 
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
     <script src="/js/jquery-1.11.1.min.js"></script>
@@ -84,7 +73,7 @@
 </head>
 
 <!--
-<body class="post-template">
+<body class="home-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -144,7 +133,7 @@
                     <nav>
                         <ul class="nav">
                             <li><a href="/" class="animsition-link">胡师寰</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
+                            <li class="nolink"><span>日落这种东西，只要活着就能随时看到。 峰仓和也--《最游记》</span></li>
                             
                             <li><a href="https://github.com/hxfsc" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
@@ -154,7 +143,7 @@
                             
                             <li><a href="http://weibo.com/hxfsc" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
-                            <li class="nolink"><span>Welcome!</span></li>
+                            
                         </ul>
                     </nav>
                     <!--// Info-bar -->
@@ -173,80 +162,41 @@
 
         <!-- ============================ Header & Logo bar =========================== -->
 
-        <!-- ============================ Hero Image =========================== -->
+        
 
-        <section id="hero" class="scrollme">
-            <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                            <div>
-                            	
-                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                                <p></p>
-				    			
-                                <h2></h2>
-                                <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-				    			
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // .col-md-12 -->
-                </div>
-                <div class="herofade beige-dk"></div>
-            </div>
-        </section>
-
-        <!-- Height spacing helper -->
-        <div class="heightblock"></div>
-        <!-- // End height spacing helper -->
-
-        <!-- ============================ END Hero Image =========================== -->
+        
       
-<section id="intro">
-    <div class="container">
-        <!-- <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2015-11-14T21:52:41.000Z" itemprop="datePublished">
-          2015-11-15
-      </time>
-    
-</span>
-                <h1></h1>
-            </div>
-        </div> -->
-        <div class="col-md-8 col-md-offset-2">
-      		<h1 id="jQuery在Firefox不支持background-position-x解决办法">jQuery在Firefox不支持background-position-x解决办法</h1><hr>
-<p>原因很简单</p>
-<p>Firefox不支持类似于”backgroun-position-x,backgroun-position-y” 这样的属性</p>
-<p>解决办法也比较简单</p>
-<p>可以用 jquery-browser-plugin 判断浏览器</p>
-<p><a href="https://github.com/gabceb/jquery-browser-plugin" target="_blank" rel="external">https://github.com/gabceb/jquery-browser-plugin</a></p>
-<p>然后</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($.browser.mozilla)&#123;</span><br><span class="line">    $(elem).css(&#123;</span><br><span class="line">        <span class="string">"background-position"</span>:<span class="string">"center center"</span>,</span><br><span class="line">        <span class="string">"-moz-transition"</span>: <span class="string">"all 500ms ease"</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    $(elem).stop(<span class="literal">true</span>).animate(&#123;</span><br><span class="line">        <span class="string">"background-position-x"</span>:<span class="string">"-73px"</span>,</span><br><span class="line">        <span class="string">"background-position-y"</span>:<span class="string">"0px"</span></span><br><span class="line">    &#125;,<span class="number">300</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="pagination" role="pagination">
-    
-    <a class="pull-left" href="/2016/03/11/PHP/安装LNMP提示 proc_open错误/" style="float: left;">
-        ← 
-    </a>
-    
-    
-    <a class="pull-right" href="/2015/11/15/Rails开始/">
-         →
-    </a>
-    
-</nav>
 
-        <div class="duoshuo"></div>
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row boxes">
+                    
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2015/09/18/前端/jQuery在Firefox不支持background-position-x解决办法/">jQuery在Firefox不支持background-position-x解决办法</a></h4>
+                            
+                            <p><time datetime="2015-09-18T03:12:46.000Z"><a href="/2015/09/18/前端/jQuery在Firefox不支持background-position-x解决办法/">2015-09-18</a></time></p>
+                        </div>
+                    
+                </div>
+            </div>    
+        </div>
+    </div>
+</section> 
+
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p></p>
+        </div>
     </div>
 </section>
-
-
       
 <!-- ============================ Footer =========================== -->
 

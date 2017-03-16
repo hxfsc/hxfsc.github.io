@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>胡师寰</title>
+  <title>Android 测试 | 胡师寰</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -43,17 +43,6 @@
     <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
     <![endif]-->
 
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <![endif]-->
 
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
     <script src="/js/jquery-1.11.1.min.js"></script>
@@ -144,7 +133,7 @@
                     <nav>
                         <ul class="nav">
                             <li><a href="/" class="animsition-link">胡师寰</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
+                            <li class="nolink"><span>日落这种东西，只要活着就能随时看到。 峰仓和也--《最游记》</span></li>
                             
                             <li><a href="https://github.com/hxfsc" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
@@ -154,7 +143,7 @@
                             
                             <li><a href="http://weibo.com/hxfsc" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
-                            <li class="nolink"><span>Welcome!</span></li>
+                            
                         </ul>
                     </nav>
                     <!--// Info-bar -->
@@ -173,83 +162,34 @@
 
         <!-- ============================ Header & Logo bar =========================== -->
 
-        <!-- ============================ Hero Image =========================== -->
+        
 
-        <section id="hero" class="scrollme">
-            <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                            <div>
-                            	
-                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                                <p></p>
-				    			
-                                <h2></h2>
-                                <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-				    			
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // .col-md-12 -->
-                </div>
-                <div class="herofade beige-dk"></div>
-            </div>
-        </section>
-
-        <!-- Height spacing helper -->
-        <div class="heightblock"></div>
-        <!-- // End height spacing helper -->
-
-        <!-- ============================ END Hero Image =========================== -->
+        
       
 <section id="intro">
     <div class="container">
-        <!-- <div class="row col-md-offset-2">
+        <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2015-11-14T20:00:28.000Z" itemprop="datePublished">
-          2015-11-15
+      <time datetime="2017-03-16T05:05:05.000Z" itemprop="datePublished">
+          2017-03-16
       </time>
     
 </span>
-                <h1></h1>
+                <h1>Android 测试</h1>
             </div>
-        </div> -->
+        </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h1 id="Rails_数据交互">Rails 数据交互</h1><hr>
-<p><strong>ActiveRecord</strong><br><em>创建模型</em></p>
-<pre><code>rails generate model <span class="keyword">user</span> <span class="title">userName</span>:<span class="type">string</span> email:<span class="type">string</span>
-</code></pre><blockquote>
-<p>创建的<code>model</code>使用的是单数 而创建 <code>controller</code> 则用复数</p>
-</blockquote>
-<p><strong>迁移数据</strong></p>
-<pre><code><span class="tag">rake</span> <span class="tag">db</span><span class="pseudo">:migrate</span>
-</code></pre><p><strong>进入控制台</strong> <code>rails console</code></p>
-<pre><code>@user = User.<span class="function"><span class="title">new</span><span class="params">(:userName =&gt; <span class="string">'Hu.Shihuan'</span>, :email =&gt; <span class="string">'hxfsc@qq.com'</span>)</span></span>
-
-@user.<span class="function"><span class="title">save</span><span class="params">()</span></span>
-
-User.<span class="function"><span class="title">find</span><span class="params">(<span class="number">1</span>)</span></span>
-
-User.<span class="function"><span class="title">all</span><span class="params">()</span></span>
-</code></pre><p><strong>数据验证</strong></p>
-<pre><code><span class="string">validates :</span>userName, <span class="string">presence:</span><span class="literal">true</span>, <span class="string">length:</span>{<span class="string">maximun:</span><span class="number">20</span>}   存在性验证,长度不能大于<span class="number">20</span>
-EMAIL = <span class="regexp">/+@/</span>i  <span class="comment">//邮箱验证</span>
-<span class="string">validates:</span>email, <span class="string">presence:</span><span class="literal">true</span>，length{<span class="string">maximun:</span><span class="number">255</span>}，<span class="string">format:</span>{<span class="string">with:</span>EMAIL},<span class="string">uniquenese:</span>{ <span class="keyword">case</span>\<span class="string">_sensitive:</span> <span class="literal">false</span>} | <span class="literal">true</span>  存在性验证,长度不能大于<span class="number">255</span>,正则匹配，唯一性验证[不加case_sensitive 则为大小写不敏感]
-</code></pre><p><strong>查看错误信息</strong></p>
-<pre><code>@user<span class="class">.errors</span><span class="class">.full_message</span>
-</code></pre>
+      		
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2015/11/15/Rails 资源/" style="float: left;">
-        ← 
-    </a>
     
+    <a class="pull-right" href="/2016/03/11/前端/Webpack 配置/">
+        Webpack 配置 →
+    </a>
     
 </nav>
 
