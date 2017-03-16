@@ -511,7 +511,9 @@ a.custom-button span {
 	display:inline-block;
 }
 .navbar .nav > li > span {
-	font-size: 12px
+	font-size: 12px;
+	font-style: normal;
+	top: 0px;
 }
 .navbar .nav > li a:hover {
 	background-color: transparent;
@@ -854,7 +856,6 @@ span.sb-caret { /* Caret Down */
 #hero h2 {
 	color: #151515;
 	margin-bottom: 20px;
-	display: inline-block;
 	padding: 14px;
 }
 #hero p {
