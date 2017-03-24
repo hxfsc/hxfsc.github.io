@@ -4,7 +4,7 @@ tags: 前端, javascript
 ---
 
 
-# Object
+## Object
 
 ### 创建方式
 
@@ -27,7 +27,6 @@ tags: 前端, javascript
 
 ```javascript
 get set writeable enuerable configurable value
-
 ```
 # defineProperty
 

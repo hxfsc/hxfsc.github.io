@@ -6,11 +6,11 @@ tags: Ruby on Rails
 ### 创建命令
     Rails new blog --skip-bundle
 
->gem 修改为taobao源
+> gem 修改为taobao源
 **项目Gemfile**
     
     source https://ruby.taobao.org
->然后 
+> 然后 
 
     bundle install
 

@@ -3,9 +3,7 @@ date: 2015-10-11 01:36:26
 tags: Ruby on Rails
 ---
 
-# Rails 路由
-----
-
+### Rails 路由
 **排除路由控制器**
 
 `config/routes.rb`文件 修改

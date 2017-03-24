@@ -3,14 +3,14 @@ date: 2015-10-11 01:42:32
 tags: Ruby on Rails
 ---
 
-# Rails 资源
----
-
+### Rails 资源
 **资源**
 --
 *创建资源*
 
-    rails generate controller posts index show create new
+```shell
+rails generate controller posts index show create new
+```
 
 创建一个posts控制器
 
@@ -18,7 +18,9 @@ tags: Ruby on Rails
 
 *删除资源*
 
-    rails destroy controller posts
+```shell
+rails destroy controller posts
+```
 
 然后在`config/routs.rb`文件里面给`posts`相关的资源删除即可完整的删除一个controller
 
