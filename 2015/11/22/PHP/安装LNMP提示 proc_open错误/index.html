@@ -185,9 +185,8 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h1 id="安装LNMP提示_proc_open错误">安装LNMP提示 proc_open错误</h1><p>在lnmp环境下安装Laravel提示错误</p>
-<pre><code>The Process <span class="type">class</span> relies <span class="function_start"><span class="keyword">on</span></span> proc_open, which <span class="keyword">is</span> <span class="keyword">not</span> available <span class="function_start"><span class="keyword">on</span></span> your PHP installation.
-</code></pre><p>到 <code>/usr/local/php/etc/php.ini</code> 寻找 <code>disable_functions</code> 字段 然后删除 <code>scandir</code> 字段即可 </p>
+      		<h3 id="安装LNMP提示_proc_open错误">安装LNMP提示 proc_open错误</h3><p>在lnmp环境下安装Laravel提示错误<br>​<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The Process class relies on proc_open, which is not available on your PHP installation.</span><br></pre></td></tr></table></figure></p>
+<p>到 <code>/usr/local/php/etc/php.ini</code> 寻找 <code>disable_functions</code> 字段 然后删除 <code>scandir</code> 字段即可 </p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
