@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Android 测试 | 胡师寰</title>
+  <title>Rails 数据交互 | 胡师寰</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -171,29 +171,49 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2017-03-16T05:05:05.000Z" itemprop="datePublished">
-          2017-03-16
+      <time datetime="2015-10-10T19:44:25.000Z" itemprop="datePublished">
+          2015-10-11
       </time>
     
+    
+    | 
+    <a href='/tags/Ruby-on-Rails/'>Ruby on Rails</a>
+    
+    
 </span>
-                <h1>Android 测试</h1>
+                <h1>Rails 数据交互</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h3 id="这是一篇android测试">这是一篇android测试</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Hello Android</span><br></pre></td></tr></table></figure>
+      		<h3 id="Rails_数据交互">Rails 数据交互</h3><p><strong>ActiveRecord</strong><br><em>创建模型</em></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails generate model user userName:string email:string</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>创建的<code>model</code>使用的是单数 而创建 <code>controller</code> 则用复数</p>
+</blockquote>
+<p><strong>迁移数据</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake db:migrate</span><br></pre></td></tr></table></figure>
+<p><strong>进入控制台</strong> <code>rails console</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@user = User.new(:userName =&#62; &#39;Hu.Shihuan&#39;, :email =&#62; &#39;hxfsc@qq.com&#39;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@user.save()</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.find(1)</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.all()</span><br></pre></td></tr></table></figure>
+<p><strong>数据验证</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">validates :userName, presence:true, length:&#123;maximun:20&#125;   存在性验证,长度不能大于20</span><br><span class="line">EMAIL = /+@/i  //邮箱验证</span><br><span class="line">validates:email, presence:true，length&#123;maximun:255&#125;，format:&#123;with:EMAIL&#125;,uniquenese:&#123; case\_sensitive: false&#125; | true  存在性验证,长度不能大于255,正则匹配，唯一性验证[不加case_sensitive 则为大小写不敏感]</span><br></pre></td></tr></table></figure>
+<p><strong>查看错误信息</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@user.errors.full_message</span><br></pre></td></tr></table></figure>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/04/10/前端/React相关/" style="float: left;">
-        ← React 相关
+    <a class="pull-left" href="/2015/11/22/PHP/安装LNMP提示 proc_open错误/" style="float: left;">
+        ← 安装LNMP提示 proc_open错误
     </a>
     
     
-    <a class="pull-right" href="/2016/03/11/前端/Webpack 配置/">
-        Webpack 配置 →
+    <a class="pull-right" href="/2015/10/11/Rails/Rails开始/">
+        Rails开始 →
     </a>
     
 </nav>
