@@ -206,12 +206,17 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/05/18/工具/AutoJump 使用/"></a></h3>
+                    <h3><a href="/2017/05/18/工具/AutoJump 使用/">工具</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2017-05-18T02:04:44.000Z" itemprop="datePublished">
+      <time datetime="2017-05-18T02:05:20.000Z" itemprop="datePublished">
           2017-05-18
       </time>
+    
+    
+    | 
+    <a href='/tags/工具-Mac/'>工具, Mac</a>
+    
     
 </span>
                     </span>
@@ -219,17 +224,16 @@
                 <div class="col-md-8">
                     <p>
                       
-                        title: 工具
-date: 2017-05-18 10:05:20
-tags: 工具, Mac
-AutoJump 使用
+                        AutoJump 使用
 brew install autojump
 
 在 .zshrc 中找到 plugins=，在后面添加(没有刚直接添加)
 1plugins=(git autojump)
 
 然后继续在上述文件中添加
-1[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] &#38;&#
+1[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] &#38;&#38; . $(brew --prefix)/etc/profile.d/autojump.sh
+
+
                       
                     </p>
                     
