@@ -54,7 +54,7 @@ dl {
   -webkit-margin-after: 0; }
 
 body {
-  background: #f8f8f8; }
+  background: #f8f8f8; width: 750px; max-width: 750px; }
 
 header {
   background: #91d4da;
