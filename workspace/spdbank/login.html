@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>SPDB Login</title>
+
+  
+  
+  <link href="./stylesheet/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="./stylesheet/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="./stylesheet/page-center.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="./stylesheet/custom.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+  
+  <link href="./stylesheet/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="./javascript/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+  
+</head>
+
+<body class="cyan">
+ 
+  <!-- <div id="loader-wrapper">
+      <div id="loader"></div>        
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+  </div> -->
+
+
+
+  <div id="login-page" class="row">
+    <style>
+        .login-form{
+          width: 360px;
+        }
+
+        #login-tips{
+          position: relative;
+          text-align: center;
+        }
+
+        #login-tips span{
+          position: relative;
+          right: 0;
+
+        }
+
+        #login-tips span.badge.new:after{
+          content: " ";
+        }
+
+    </style>
+
+    
+
+    <div class="col s12 z-depth-4 card-panel">
+      <form class="login-form">
+        <div class="row">
+          <div class="input-field col s12 center">
+            <img src="images/login-logo.png" alt="" class="circle responsive-img valign profile-image-login">
+            <p class="center login-form-text">SPDB-Opsmartteach</p>
+          </div>
+        </div>
+        <div class="row">
+          <div id="login-tips"></div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="username" type="text">
+            <label for="username" class="center-align">用户名</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input id="password" type="password">
+            <label for="password">密码</label>
+          </div>
+        </div>
+        <div class="row">          
+          <div class="input-field col s12 m12 l12 login-text">
+              <input type="checkbox" id="remember-me" />
+              <label for="remember-me">记住我</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <a href="#" class="btn waves-effect waves-light blue col s12" id="login-btn">登录</a>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="./javascript/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="./javascript/materialize.js"></script>
+  <script type="text/javascript" src="./javascript/prism.js"></script>
+  <script type="text/javascript" src="./javascript/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script type="text/javascript" src="./javascript/plugins.js"></script>
+
+  <script>
+    $(function(){
+
+      /**
+       * [_modal description]
+       * @type {CoustomModal}
+       * el : 目标el
+       * opel : 当前操作el
+       * text : 提示消息
+       */
+      
+      var _modal = new CoustomModal({el:"#login-page",opel:"login-modal"});
+      
+      $("#login-btn").on({
+        "click":function(){
+          
+          //_modal.show_error_modal({text:"密码输入错误"});
+          //_modal.show_info_modal({text:"密码输入错误"});
+         //_modal.show_waring_modal({text:"密码输入错误"});
+         //_modal.show_waring_tips({ el:"#login-tips",opel:"login_opel_tips", text:"密码输入错误"});
+         //_modal.show_info_tips({ el:"#login-tips",opel:"login_opel_tips", text:"密码输入错误"});
+          _modal.show_info_modal({ 
+            el:"#login-tips",
+            opel:"login_opel_tips", 
+            text:"密码输入错误",
+            callback:{
+              setConfirm:function(){
+                alert("setConfirm");
+              },
+              setClose:function(){
+                alert("setColse")
+              }
+            }
+          });
+
+         /* _modal.show_info_modal({ 
+            el:"#login-tips",
+            opel:"login_opel_tips", 
+            text:"密码输入错误"
+          });*/
+        }
+      })
+    })
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="./stylesheet/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+<link href="./stylesheet/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+<link href="./stylesheet/custom.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+
+<link href="./javascript/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+	
+	<title>添加商品</title>
+</head>
+<body>
+
+			<!-- <div id="loader-wrapper">
+        <div id="loader"></div>        
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div> -->
+    
+  	<header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="cyan">
+                <div class="nav-wrapper">
+                    <h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1"><img src="images/spdb-logo.png" alt="materialize logo"></a> <span class="logo-text">浦发银行卡</span></h1>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light"><i class="mdi-social-notifications"></i></a>
+                        </li>                   
+                        <li><a href="./login.html" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse"><i class="mdi-action-exit-to-app"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="main">
+        <div class="wrapper">
+            <aside id="left-sidebar-nav">
+                <ul id="slide-out" class="side-nav fixed leftside-navigation">
+                    <li class="user-details cyan darken-2">
+                        <div class="row">
+                            <div class="col col s4 m4 l4">
+                                <div style="height:52px;"></div>
+                            </div>
+                            
+                         </div>
+                    </li>
+                    
+                    <li class="no-padding">
+                        <ul class="collapsible collapsible-accordion">
+                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-image-gradient"></i>商品管理</a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="./product-list.html">产品列表</a></li>                                        
+                                        <li><a href="./product-add.html">添加商品</a></li>
+                                        <li><a href="./product-off.html">下架商品</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="bold"><a href="./shopping-cart.html" class="waves-effect waves-cyan"><i class="mdi-action-shopping-cart"></i>购物车</a>
+                            </li>
+                            <li class="bold"><a class="collapsible-header  waves-effect waves-cyan"><i class="mdi-image-palette"></i>订单信息</a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="./order-billionconnect.html">亿点卡订单</a></li>
+                                        <li><a href="./order-moder.html">设备订单</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                          </ul>
+                    </li>
+                    
+                </ul>
+                <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only darken-2"><i class="mdi-navigation-menu" ></i></a>
+            </aside>            <section id="content">
+                <div class="container">		
+		<div id="breadcrumbs-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <h5 class="breadcrumbs-title">添加商品</h5>
+            <ol class="breadcrumb">
+              <li><a href="index.html">商品管理</a>
+              <li class="active">添加商品</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div id="product-add-wrap">
+      <div class="card-panel">
+        <form>
+          <div class="row">
+                    <div class="input-field col s12">
+                      <input id="name" type="text">
+                      <label for="first_name">ID</label>
+                    </div>
+          </div>
+          <div class="row">
+                    <div class="input-field col s12">
+                      <input id="coutry-zh" type="text">
+                      <label for="coutry-zh">国家（中文）</label>
+                    </div>
+          </div>
+          <div class="row">
+                    <div class="input-field col s12">
+                      <input id="coutry-en" type="text">
+                      <label for="coutry-en">国家（英文）</label>
+                    </div>
+          </div>
+          <div class="row" id="product-add-file-field">
+                <div class="input-field col s10">
+                  <div class="file-field">
+                    <div class="btn">
+                      <span>点击上传</span><i class="mdi-file-cloud-upload right"></i>
+                      <input type="file">
+                    </div>
+                  </div>
+                  <label>国旗</label>
+                </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s12">
+                <input id="coutry-en" type="text">
+                <label for="coutry-en">运营商</label>
+              </div>
+          </div>
+          <div class="row" id="product-add-input-item">
+            <div class="input-field col s12">
+              <label>套餐类型</label>
+              <select>
+                <option value="" disabled selected>日程1</option>
+                <option value="">日程2</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+                    <div class="input-field col s12">
+                      <input id="coutry-en" type="text">
+                      <label for="coutry-en">套餐单位</label>
+                    </div>
+          </div>
+          <div class="row">
+                    <div class="input-field col s12">
+                      <input id="coutry-en" type="text">
+                      <label for="coutry-en">套餐价格</label>
+                    </div>
+          </div>
+          <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="message" class="materialize-textarea"></textarea>
+                      <label for="message">商品描述</label>
+                    </div>
+          </div>
+          <div class="row">
+                    <div class="input-field col s12">
+                      <button class="btn cyan waves-effect waves-light right" type="submit" name="action">确认添加
+                        <i class="mdi-content-add right"></i>
+                      </button>
+                    </div>
+          </div>
+        </form>      
+      </div>     	
+    </div>    
+          </div>
+            </section>
+           
+        </div>
+        
+
+    </div>    
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+            Copyright © 2016 <a class="grey-text text-lighten-4" href="http://www.opsmarttech.com/" target="_blank">Opsmarttech</a> All rights reserved.
+            <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="http://www.opsmarttech.com/">Opsmarttech</a></span>
+        </div>
+    </div>
+</footer>
+</body>
+    <script type="text/javascript" src="./javascript/jquery-1.11.2.min.js"></script>    
+    <script type="text/javascript" src="./javascript/materialize.js"></script>
+    <script type="text/javascript" src="./javascript/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script type="text/javascript" src="./javascript/plugins.js"></script>
+</html>
