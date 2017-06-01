@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2017/5 | 胡师寰</title>
+  <title>Rails开始 | 胡师寰</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -73,7 +73,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -166,46 +166,60 @@
 
         
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/05/26/Rails/使用brew安装MySQL/">Rails开始</a></h4>
-                            
-                            <p><time datetime="2017-05-26T07:14:20.000Z"><a href="/2017/05/26/Rails/使用brew安装MySQL/">2017-05-26</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/05/18/工具/AutoJump 使用/">工具</a></h4>
-                            
-                            <p><time datetime="2017-05-18T02:05:20.000Z"><a href="/2017/05/18/工具/AutoJump 使用/">2017-05-18</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-05-26T07:14:20.000Z" itemprop="datePublished">
+          2017-05-26
+      </time>
+    
+    
+    | 
+    <a href='/tags/Ruby-on-Rails/'>Ruby on Rails</a>
+    
+    
+</span>
+                <h1>Rails开始</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<ul>
+<li><p>安装MySQL <code>brew install mysql</code></p>
+</li>
+<li><p>启动MySQL <code>mysql.server start</code></p>
+</li>
+<li><p>启动后登陆 <code>mysql -uroot -p</code></p>
+</li>
+<li><p>在 Ruby on Rails 下使用  </p>
+<ul>
+<li><p>在Gemfile文件增加上 <code>gem &#39;mysql2&#39;</code></p>
+</li>
+<li><p>配置文件 <code>config/database.yml</code></p>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">development:&#10;    adapter: mysql&#10;    encoding: utf8&#10;    reconnect: false  &#10;    database: database_name   #&#21019;&#24314;&#30340;mysql&#25968;&#25454;&#24211;&#21517;&#10;    pool: 5&#10;    username: root            #&#36830;&#25509;mysql&#30340;&#29992;&#25143;&#21517;&#10;    password:                 #&#36830;&#25509;mysql&#30340;&#29992;&#25143;&#21517;&#30340;&#23494;&#30721;&#10;    host: localhost           #&#36830;&#25509;mysql&#30340;&#26381;&#21153;&#22120;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2017/05/18/工具/AutoJump 使用/">
+        工具 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo"></div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
