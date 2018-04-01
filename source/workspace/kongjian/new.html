@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./public/styles/css.css" />
+    <!--[if lt IE 9]>
+      <script src="./public/javascript/html5shiv.min.js"></script>
+      <script src="./public/javascript/respond.min.js"></script>
+    <![endif]-->
+    <title>资讯管理</title>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top app-nav-top">
+        <div class="app-logo left">
+            <h1>Logo</h1>
+        </div>
+
+        <div class="app-nav-setting right">
+            <span>超级管理员</span>
+            <!-- <a href="#">WQS</a> -->
+            <div class="dropdown">
+              <a id="drop" data-target="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WQS<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="drop">
+                <li><a href="./modify-password.html">修改密码</a></li>
+                <li><a href="./login.html">退出</a></li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    <div class="app-container">
+        <div class="app-left">
+            <ul>
+                <li><a href="./organization.html">组织机构</a></li>
+                <li><a href="./role.html">角色管理</a></li>
+                <li><a href="./user.html">用户管理</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="./home.html">首页</a></li>
+                <li><a href="./enterprise-info.html">企业信息管理</a></li>
+                <li><a href="./banner.html">banner管理</a></li>
+                <li><a href="./space.html">空间管理</a></li>
+                <li class="active"><a href="./new.html">资讯管理</a></li>
+                <li><a href="./booking.html">预约管理</a></li>
+            </ul>
+
+        </div>
+
+        <div class="app-main">
+            <div class="breadcrumb-wrap">
+                <ol class="breadcrumb">
+                
+                    <li><a href="#">首页</a></li>
+                
+                    <li><a href="#">资讯管理</a></li>
+                
+                </ol>
+            </div>
+
+
+            
+            <div class="main container-fluid">
+                <div class="space-wrap mt-30 container-fluid">
+                    <div class="row">
+                        <a class="btn btn-default" href="./new-add.html">发布资讯</a>
+                        <hr>
+                    </div>
+
+                    <div class="row">
+                        <table class="table table-bordered table-hover table-radius">
+                            <thead>
+                                <tr>
+                                    <th><span class="glyphicon glyphicon-trash table-del-btn"></span></th>
+                                    <th>资讯标题</th>
+                                    <th>资讯简介</th>
+                                    <th>是否热讯</th>
+                                    <th>发布者</th>
+                                    <th>时间</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>高端联合办公品牌</td>
+                                    <td class="new-table-intro"><p>此前，Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业</p></td>
+                                    <td><span class="glyphicon glyphicon-ok-sign red-icon"></span></td>
+                                    <td>admin</td>
+                                    <td>2018-03-09 16:40</td>
+                                    <td>
+                                        <a href="#">编辑</a>
+                                        <a href="#">查看</a>
+                                        <a href="#">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>高端联合办公品牌</td>
+                                    <td class="new-table-intro"><p>此前，Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业</p></td>
+                                    <td><span class="glyphicon glyphicon-info-sign blue-icon"></span></td>
+                                    <td>admin</td>
+                                    <td>2018-03-09 16:40</td>
+                                    <td>
+                                        <a href="#">编辑</a>
+                                        <a href="#">查看</a>
+                                        <a href="#">删除</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>高端联合办公品牌</td>
+                                    <td class="new-table-intro"><p>此前，Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业</p></td>
+                                    <td><span class="glyphicon glyphicon-ok-sign red-icon"></span></td>
+                                    <td>admin</td>
+                                    <td>2018-03-09 16:40</td>
+                                    <td>
+                                        <a href="#">编辑</a>
+                                        <a href="#">查看</a>
+                                        <a href="#">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>高端联合办公品牌</td>
+                                    <td class="new-table-intro"><p>此前，Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业</p></td>
+                                    <td><span class="glyphicon glyphicon-info-sign blue-icon"></span></td>
+                                    <td>admin</td>
+                                    <td>2018-03-09 16:40</td>
+                                    <td>
+                                        <a href="#">编辑</a>
+                                        <a href="#">查看</a>
+                                        <a href="#">删除</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>高端联合办公品牌</td>
+                                    <td class="new-table-intro"><p>此前，Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业</p></td>
+                                    <td><span class="glyphicon glyphicon-ok-sign red-icon"></span></td>
+                                    <td>admin</td>
+                                    <td>2018-03-09 16:40</td>
+                                    <td>
+                                        <a href="#">编辑</a>
+                                        <a href="#">查看</a>
+                                        <a href="#">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>高端联合办公品牌</td>
+                                    <td class="new-table-intro"><p>此前，Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业Gravity一直为澳大利亚企业和专业</p></td>
+                                    <td><span class="glyphicon glyphicon-info-sign blue-icon"></span></td>
+                                    <td>admin</td>
+                                    <td>2018-03-09 16:40</td>
+                                    <td>
+                                        <a href="#">编辑</a>
+                                        <a href="#">查看</a>
+                                        <a href="#">删除</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="navigation-wrap">
+                          <nav aria-label="page navigation">
+                            <ul class="pagination">
+                              <li>
+                                <a href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;上一页</span>
+                                </a>
+                              </li>
+                              <li class="active"><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li>
+                                <a href="#" aria-label="Next">
+                                  <span aria-hidden="true">下一页&raquo;</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+<script type="text/javascript" src="./public/javascript/jquery.js"></script>
+<script type="text/javascript" src="./public/javascript/bootstrap.min.js"></script>
+</html>

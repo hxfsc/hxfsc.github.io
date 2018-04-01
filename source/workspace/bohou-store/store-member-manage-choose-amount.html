@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/styles/css.css">
+    <title>会员充值</title>
+</head>
+<body>
+    <div class="bh-app">
+
+
+<div class="login-wrap store-member-wrap user-info-wrap">
+    <div class="store-member-item choose-amount-item">
+        <a href="#">
+        <div class="store-member-user-info-head choose-amount-head">
+            <div class="store-member-user-info-thumb">
+                <img src="./public/img/oval.jpg" alt="">
+            </div>
+
+            <div class="store-member-user-info-intro">
+                <h3>凉生</h3>
+                <p>18712345678</p>
+            </div> 
+        </div>
+        </a>
+    </div>
+
+
+    <div class="store-member-item">
+        <div class="choose-amount-item-wrap">
+
+            <div class="choose-amount-item-head">
+                选择充值金额
+            </div>
+
+            <div class="choose-amount-item-list">
+                <span class="active">20</span>
+                <span>50</span>
+                <span>100</span>
+            </div>
+            
+            <div class="choose-amount-item-list">
+                <span>200</span>
+                <span>500</span>
+                <span class="other">其他金额</span>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="store-member-item-userinfo choose-amount-item-userifo">经办人</a>
+
+    <div class="billing-oreder-confirm-money">
+        <button class="weui-btn weui-btn_primary">确认充值</button>
+    </div>
+
+</div>
+
+</div>    
+</body>
+
+<script type="text/javascript" src="./public/javascript/main.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $(".choose-amount-item-list span").on("click", function(){
+            $(".choose-amount-item-list span").removeClass("active");
+            $(this).addClass("active");
+        })
+    })
+</script>
+</html>

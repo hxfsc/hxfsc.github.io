@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./public/styles/css.css" />
+    <!--[if lt IE 9]>
+      <script src="./public/javascript/html5shiv.min.js"></script>
+      <script src="./public/javascript/respond.min.js"></script>
+    <![endif]-->
+    <title>登陆</title>
+  </head>
+  <body style="background-color: #eee;">
+    <div class="container sign-page-wrap">
+      <form class="form-signin" action="./home.html">
+        <h2 class="form-signin-heading">登录</h2>
+        <div class="alert alert-danger alert-dismissible fade in" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <p>用户名和密码不匹配</p>
+        </div>
+        <label for="inputEmail" class="sr-only">用户名</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="用户名">
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input type="password" class="form-control" placeholder="密码">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> 记住我
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+      </form>
+    </div>
+  </body>
+  <script type="text/javascript" src="./public/javascript/jquery.js"></script>
+  <script type="text/javascript" src="./public/javascript/bootstrap.min.js"></script>
+</html>

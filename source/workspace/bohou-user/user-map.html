@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/styles/css.css">
+    <link rel="stylesheet" href="./public/styles/my-center.css">
+    <title>商品详情</title>
+</head>
+<body>
+    <div class="bh-app">
+        
+    <div class="store-wrap store-activity-details" id="map-wrap">
+        <div id="container" style="height:100%;"></div>
+        <p id="info" style="margin-top:10px;"></p>
+    </div>
+    <a href="javascript:;" class="user-map-list"></a>
+    <div class="weui-tabbar bh-user-tabbar">
+        <a href="#" class="active">
+            <span class="icon"></span>
+            <h3>预约</h3>
+        </a>
+
+        <a href="#">
+            <span class="icon"></span>
+            <h3>商品</h3>
+        </a>
+
+        <a href="#">
+            <span class="icon"></span>
+            <h3>我的</h3>
+        </a>
+    </div>  
+</div>
+</body>
+<script type="text/javascript" src="./public/javascript/main.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=pgzrWNDaZNZOqWqQErfKnqi1ja4T8s6v"></script>
+<script>
+        
+    var init = function() {
+        var map = new BMap.Map("container");          // 创建地图实例
+        var point = new BMap.Point(116.331398,39.897445);
+        map.centerAndZoom(point,15);
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(function(r){
+            if(this.getStatus() == BMAP_STATUS_SUCCESS){
+                var mk = new BMap.Point(r.point);  // 创建点坐标  
+                map.addOverlay(mk);
+                map.panTo(r.point); 
+
+                new SetMap(31.85306526,117.23304709,"蜀山一店 距离当前地点3.7公里",-30,-30);
+                new SetMap(31.84306526,117.23354709,"蜀山二店 距离当前地点2.3公里");
+                new SetMap(31.85306526,117.22104709,"蜀山三店 距离当前地点3.7公里");
+
+            }
+            else {
+                alert('错误:'+this.getStatus());
+            }        
+        },{enableHighAccuracy: true});
+
+        
+        /**
+         * [SetMap description]
+         * @param {[float]} lat     [LatLng lat]
+         * @param {[float]} lng     [LatLng lng]
+         * @param {[string]} tips  [标注]
+         * @param {[float]} tipsX [标注 LatLng x]
+         * @param {[float]} tipsY [标注 LatLng y]
+         */
+        
+        function SetMap(lng, lat, tips, tipsX, tipsY){
+            var pt = new BMap.Point(lat, lng);
+            var myIcon = new BMap.Icon("./public/images/homepage_location1.png", new BMap.Size(32,32));
+            var marker = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
+            var opts = {
+              position : point,    // 指定文本标注所在的地理位置
+              offset:new BMap.Size(tipsX == undefined ? -80 : tipsX, tipsY == undefined ? -30 : tipsY )   //设置文本偏移量
+            }
+            var label = new BMap.Label(tips,opts);
+            label.setStyle({
+                color : "#FFF",
+                background: "#6b6565",
+                border:"#6b6565",
+                borderRadius: "3px",
+                padding: "2px 5px",
+                fontSize : "12px",
+                height : "20px",
+                lineHeight : "20px"
+             });
+            map.addOverlay(marker);    
+            marker.setLabel(label);    
+        }
+    }
+
+
+    $(function(){
+        var $_mapWrap = $("#map-wrap");
+        var $_tabbarHeight = $(".weui-tabbar").height();
+        $_mapWrap.css({
+            height: $("body").height() - $_tabbarHeight
+        });
+
+        $("#container").css({
+            height: $("body").height() - $_tabbarHeight
+        });
+        setTimeout(function(){
+            init()
+        }, 500)
+
+    })
+</script>
+</html>
