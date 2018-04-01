@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./public/styles/css.css" />
+    <!--[if lt IE 9]>
+      <script src="./public/javascript/html5shiv.min.js"></script>
+      <script src="./public/javascript/respond.min.js"></script>
+    <![endif]-->
+    <title>企业信息管理</title>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top app-nav-top">
+        <div class="app-logo left">
+            <h1>Logo</h1>
+        </div>
+
+        <div class="app-nav-setting right">
+            <span>超级管理员</span>
+            <!-- <a href="#">WQS</a> -->
+            <div class="dropdown">
+              <a id="drop" data-target="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WQS<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="drop">
+                <li><a href="./modify-password.html">修改密码</a></li>
+                <li><a href="./login.html">退出</a></li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    <div class="app-container">
+        <div class="app-left">
+            <ul>
+                <li><a href="./organization.html">组织机构</a></li>
+                <li><a href="./role.html">角色管理</a></li>
+                <li><a href="./user.html">用户管理</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="./home.html">首页</a></li>
+                <li class="active" ><a href="./enterprise-info.html">企业信息管理</a></li>
+                <li><a href="./banner.html">banner管理</a></li>
+                <li><a href="./space.html">空间管理</a></li>
+                <li><a href="./new.html">资讯管理</a></li>
+                <li><a href="./booking.html">预约管理</a></li>
+            </ul>
+
+        </div>
+
+        <div class="app-main">
+            <div class="breadcrumb-wrap">
+                <ol class="breadcrumb">
+                
+                    <li><a href="#">首页</a></li>
+                
+                    <li><a href="#">企业信息管理</a></li>
+                
+                </ol>
+            </div>
+
+
+            <div class="main container-fluid">
+                <div class="enterprise-info-wrap mt-30 container-fluid">
+                    <form class="form-horizontal">
+                      <div class="form-group">
+                        <label class="col-md-1 control-label">企业名称:</label>
+                        <div class="col-md-3">
+                          <input type="text" class="form-control" id="" placeholder="企业名称">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-md-1 control-label">大本营:</label>
+                        <div class="col-md-3">
+                          <input type="text" class="form-control" id="" placeholder="地址">
+                        </div>
+                        <div class="col-md-3 local-map-marker"><a href="#" class="glyphicon glyphicon-map-marker">地图定位</a></div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-md-1 control-label">空间介绍:</label>
+                        <div class="col-md-3">
+                          <textarea name="" id="" rows="3" placeholder="空间介绍" class="form-control no-resize"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-md-1 control-label">客服电话:</label>
+                        <div class="col-md-3">
+                          <input type="text" class="form-control" id="" placeholder="客服电话">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-md-1 control-label">邮箱:</label>
+                        <div class="col-md-3">
+                          <input type="text" class="form-control" id="" placeholder="邮箱">
+                        </div>
+                      </div>
+
+                      <div class="form-group submit-box">
+                        <div class="col-md-offset-1 col-md-4">
+                          <button type="submit" class="btn btn-default btn-primary">提交</button>
+                        </div>
+                      </div>
+
+                    </form>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+<script type="text/javascript" src="./public/javascript/jquery.js"></script>
+<script type="text/javascript" src="./public/javascript/bootstrap.min.js"></script>
+</html>
