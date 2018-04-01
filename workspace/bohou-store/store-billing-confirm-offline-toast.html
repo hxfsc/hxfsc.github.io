@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/styles/css.css">
+    <title>立即支付</title>
+</head>
+<body>
+    <div class="bh-app">
+
+        <div class="store-wrap">
+            
+            <div class="bh-msg bh-msg-debit">
+                <div class="msg-title">
+                    收款金额：<i>￥2000.00</i>
+                </div>
+                
+                <div class="msg-body msg-offline-payment">
+                    <div class="offline-payment-edit">
+                        <textarea class="weui-iput" placeholder="备注"></textarea>
+                    </div>
+
+                    <div class="offline-payment-upload">
+                        <div class="offline-payment-upload-box">
+                            <input type="file" name="" id="">
+                            <span class="upload-icon"></span>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="billing-oreder-confirm-money">
+               <button class="weui-btn weui-btn_primary">完成</button>
+            </div>
+
+
+            <div id="toast">
+                <div class="weui-mask_transparent"></div>
+                <div class="weui-toast">                    
+                    <p class="weui-offline-toast__content">请上传支付凭证</p>
+                    <a href="#" class="toast-btn">好的</a>
+                </div>
+            </div>
+
+
+
+            
+        </div>
+
+    </div>    
+</body>
+    <script type="text/javascript" src="./public/javascript/main.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".toast-btn").on("click", function(){
+                $("#toast").fadeOut(200);
+            }) 
+        })
+    </script>
+</html>
+
+

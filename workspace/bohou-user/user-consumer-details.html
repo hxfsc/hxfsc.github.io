@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/styles/css.css">
+    <link rel="stylesheet" href="./public/styles/my-center.css">
+    <title>消费详情</title>
+</head>
+<body>
+    <div class="bh-app">
+        
+
+        <div class="user-consumer-wrap">
+            <div class="user-consumer-item user-consumer-item-price">
+                <div class="user-consumer-item-head">
+                    <p>交易金额</p>
+                    <h3><i>￥</i>950.00</h3>
+                </div>
+
+                <div class="user-consumer-item-body">
+                    <p><span>交易时间：</span> <label>2017-10-01 09:34:33</label></p>
+                    <p><span>交易单号：</span> <label>18201234567890qaz124563789856</label></p>
+                    <p><span>消费门店：</span> <label>波后蜀山店</label></p>
+                </div>
+            </div>
+
+            <div class="user-consumer-item">
+                <div class="user-consumer-item-head user-consumer-price-details-head">
+                    <h3><span>商品详情：</span> <label>2个商品</label></h3>
+                </div>
+
+                <div class="user-consumer-item-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>商品名称</th>
+                                <th>单价</th>
+                                <th>数量</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1号美容产品</td>
+                                <td>￥2000.00</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1号美容产品</td>
+                                <td>￥2000.00</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1号美容产品</td>
+                                <td>￥2000.00</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1号美容产品</td>
+                                <td>￥2000.00</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1号美容产品</td>
+                                <td>￥2000.00</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1号美容产品</td>
+                                <td>￥2000.00</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1号美容产品</td>
+                                <td>￥2000.00</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1号美容产品</td>
+                                <td>￥2000.00</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1号美容产品</td>
+                                <td>￥2000.00</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1号美容产品</td>
+                                <td>￥2000.00</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1号美容产品</td>
+                                <td>￥2000.00</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            
+        </div>
+
+    </div>    
+</body>
+    <script type="text/javascript" src="./public/javascript/main.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            $(".user-consumer-price-details-head").on("click",function(){
+                var $_this = $(this);
+                if($_this.hasClass("hide")){
+                    $(".user-consumer-item-body").eq(1).css("display","block");
+                    $_this.removeClass("hide");
+                }else{
+                    $(".user-consumer-item-body").eq(1).css("display","none");
+                    $_this.addClass("hide");
+                }
+            })
+        })
+    </script>
+</html>
+
+

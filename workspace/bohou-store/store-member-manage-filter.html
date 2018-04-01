@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/styles/css.css">
+    <title>会员管理</title>
+</head>
+<body>
+    <div class="bh-app">
+
+
+<div class="login-wrap store-member-wrap">
+    <div class="store-member-person-wrap">
+        
+        <div class="store-member-person-search-box">
+            <div class="store-member-person-search">
+                <input type="text" class="weui-input" placeholder="请输入会员手机号、会员卡号">
+            </div>
+        </div>
+        <div class="weui-mask" id="iosMask"></div>
+        <div class="store-member-person-head">
+            <div class="store-member-person-item">
+                <span>全部会员</span>
+            </div>
+
+            <div class="store-member-person-item">
+                <span class="dropdown">生日</span>
+
+                <div class="dropdown-content-box">
+                    <ul>
+                        <li class="active"><a href="#">生日</a></li>
+                        <li><a href="#">结婚纪念日</a></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="store-member-person-item">
+                <span>回访</span>
+            </div>
+
+            <div class="store-member-person-item">
+                <span>消费</span>
+            </div>
+        </div>
+        
+        <div class="store-member-person-list">
+            <a href="#">
+                <div class="store-member-thumb">
+                    <img src="./public/img/oval.jpg" alt="">
+                </div>
+
+                <div class="store-member-intro">
+                    <h3>凉生 <i>18712345678</i></h3>
+                    <p>办卡时间：2017-01-01 10:57</p>
+                    <p>最后消费：2017-01-01 10:57</p>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="store-member-person-list">
+            <a href="#">
+                <div class="store-member-thumb">
+                    <img src="./public/img/oval.jpg" alt="">
+                </div>
+
+                <div class="store-member-intro">
+                    <h3>凉生 <i>18712345678</i></h3>
+                    <p>办卡时间：2017-01-01 10:57</p>
+                    <p>最后消费：2017-01-01 10:57</p>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="store-member-person-list">
+            <a href="#">
+                <div class="store-member-thumb">
+                    <img src="./public/img/oval.jpg" alt="">
+                </div>
+
+                <div class="store-member-intro">
+                    <h3>凉生 <i>18712345678</i></h3>
+                    <p>办卡时间：2017-01-01 10:57</p>
+                    <p>最后消费：2017-01-01 10:57</p>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="store-member-person-list">
+            <a href="#">
+                <div class="store-member-thumb">
+                    <img src="./public/img/oval.jpg" alt="">
+                </div>
+
+                <div class="store-member-intro">
+                    <h3>凉生 <i>18712345678</i></h3>
+                    <p>办卡时间：2017-01-01 10:57</p>
+                    <p>最后消费：2017-01-01 10:57</p>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="store-member-person-list">
+            <a href="#">
+                <div class="store-member-thumb">
+                    <img src="./public/img/oval.jpg" alt="">
+                </div>
+
+                <div class="store-member-intro">
+                    <h3>凉生 <i>18712345678</i></h3>
+                    <p>办卡时间：2017-01-01 10:57</p>
+                    <p>最后消费：2017-01-01 10:57</p>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="store-member-person-list">
+            <a href="#">
+                <div class="store-member-thumb">
+                    <img src="./public/img/oval.jpg" alt="">
+                </div>
+
+                <div class="store-member-intro">
+                    <h3>凉生 <i>18712345678</i></h3>
+                    <p>办卡时间：2017-01-01 10:57</p>
+                    <p>最后消费：2017-01-01 10:57</p>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="store-member-person-list">
+            <a href="#">
+                <div class="store-member-thumb">
+                    <img src="./public/img/oval.jpg" alt="">
+                </div>
+
+                <div class="store-member-intro">
+                    <h3>凉生 <i>18712345678</i></h3>
+                    <p>办卡时间：2017-01-01 10:57</p>
+                    <p>最后消费：2017-01-01 10:57</p>
+                </div>
+            </a>
+        </div>
+
+        <a class="store-member-btn" href="#">新办会员</a>
+    </div>
+
+    
+</div>
+
+</div>    
+</body>
+
+<script type="text/javascript" src="./public/javascript/main.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //点击选中列表项
+        $(".dropdown-content-box ul li").on("click", function(){
+            var $_this = $(this);
+            $_this.addClass("active").siblings().removeClass("active");
+
+            $("#iosMask").fadeOut(200);
+            $(".dropdown-content-box").hide();
+
+            $_this.parent().parent().parent().find(".dropdown").text($_this.text())
+        });
+
+        //点击出现选项
+        $(".dropdown").on("click", function(){
+            var $_this = $(this);
+            if($_this.next(".dropdown-content-box")){
+                $("#iosMask").fadeIn(200);
+                $_this.next(".dropdown-content-box").show();
+            }
+        });
+    })
+
+</script>
+</html>

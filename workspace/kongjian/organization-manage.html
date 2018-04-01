@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./public/styles/css.css" />
+    <!--[if lt IE 9]>
+      <script src="./public/javascript/html5shiv.min.js"></script>
+      <script src="./public/javascript/respond.min.js"></script>
+    <![endif]-->
+    <title>机构管理</title>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top app-nav-top">
+        <div class="app-logo left">
+            <h1>Logo</h1>
+        </div>
+
+        <div class="app-nav-setting right">
+            <span>超级管理员</span>
+            <!-- <a href="#">WQS</a> -->
+            <div class="dropdown">
+              <a id="drop" data-target="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WQS<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="drop">
+                <li><a href="./modify-password.html">修改密码</a></li>
+                <li><a href="./login.html">退出</a></li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    <div class="app-container">
+        <div class="app-left">
+            <ul>
+                <li class="active"><a href="./organization.html">组织机构</a></li>
+                <li><a href="./role.html">角色管理</a></li>
+                <li><a href="./user.html">用户管理</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="./home.html">首页</a></li>
+                <li><a href="./enterprise-info.html">企业信息管理</a></li>
+                <li><a href="./banner.html">banner管理</a></li>
+                <li><a href="./space.html">空间管理</a></li>
+                <li><a href="./new.html">资讯管理</a></li>
+                <li><a href="./booking.html">预约管理</a></li>
+            </ul>
+
+        </div>
+
+        <div class="app-main">
+            <div class="breadcrumb-wrap">
+                <ol class="breadcrumb">
+                
+                    <li><a href="#">首页</a></li>
+                
+                    <li><a href="#">机构管理</a></li>
+                
+                </ol>
+            </div>
+
+
+            
+            <div class="main container-fluid">
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <div id="organization-manage-dialog">
+        <div class="row container-fluid">
+            <a href="#" class="btn btn-default btn-sm">添加用户</a>
+            <hr>
+        </div>
+
+        <div class="row container-fluid">
+            <table class="table table-bordered table-hover table-radius">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>姓名</th>
+                        <th>登陆名</th>
+                        <th>机构</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>王大锤</td>
+                        <td>wdq</td>
+                        <td>管理用户 - 三里屯桉树空间</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>王大锤</td>
+                        <td>wdq</td>
+                        <td>管理用户 - 三里屯桉树空间</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>王大锤</td>
+                        <td>wdq</td>
+                        <td>管理用户 - 三里屯桉树空间</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>王大锤</td>
+                        <td>wdq</td>
+                        <td>管理用户 - 三里屯桉树空间</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./public/javascript/jquery.js"></script>
+<script type="text/javascript" src="./public/javascript/bootstrap.min.js"></script>
+<script type="text/javascript" src="./public/javascript/dialog-plus.js"></script>
+<script type="text/javascript">
+    var dialog = dialog({
+        title:"管理用户 - 三里屯桉树空间",
+        content: document.getElementById("organization-manage-dialog"),
+        width: 480,
+        zIndex:9999
+    }).showModal()
+</script>
+</html>

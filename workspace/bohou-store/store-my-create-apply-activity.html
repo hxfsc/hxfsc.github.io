@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/styles/css.css">
+    <title>创建会员</title>
+</head>
+<body>
+    <div class="bh-app">
+
+
+<div class="login-wrap store-member-wrap">
+    <div class="store-member-item store-apply-activity">
+        <div class="store-member-item-body">
+            <div class="store-member-form-item">
+                <input type="text" class="weui-input" placeholder="请输入活动标题">
+                <span><strong>*</strong>活动标题</span>
+            </div>
+
+            <div class="store-member-form-item">
+                <span><strong>*</strong>开始日期</span>
+                <div class="adds-dright" id="showDatePicker1">请选择</div>
+            </div>
+
+            <div class="store-member-form-item">
+                <span><strong>*</strong>截止日期</span>
+                <div class="adds-dright" id="showDatePicker2">请选择</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="billing-oreder-confirm-money store-create-apply-activity-btnwrap">
+        <button class="weui-btn weui-btn_primary">下一步</button>
+    </div>
+
+</div>
+
+</div>    
+</body>
+
+<script type="text/javascript" src="./public/javascript/main.js"></script>
+<script type="text/javascript">
+    
+    function formatDate(result){
+        var _date = [];
+        _date.push(result[0]);
+        _date.push(result[1] < 10 ? "0"+result[1] : result[1]);
+        _date.push(result[2] < 10 ? "0"+result[2] : result[2]);
+        return _date;
+    }
+
+    function getNowDate(){
+      var _date = [];
+      _date.push(new Date().getFullYear());
+      _date.push((new Date().getMonth()+1) > 10 ? (new Date().getMonth()+1) : "0"+(new Date().getMonth()+1));
+      _date.push((new Date().getDate()) > 10 ? (new Date().getDate()) : "0"+(new Date().getDate()));
+      return _date;
+    }
+
+    var _nowDate = getNowDate();
+
+    $('#showDatePicker1').on('click', function () {
+       weui.datePicker({
+           start: new Date().getFullYear(),
+           end: new Date().getFullYear()+1,
+           defaultValue:_nowDate,
+           onChange: function (result) {
+                var _result = formatDate(result);
+                $('#showDatePicker1').text(_result[0] + "-" + _result[1] + "-" + _result[2])
+           },
+           onConfirm: function (result) {
+               //console.log(result);
+           }
+       });
+   });
+
+   $('#showDatePicker2').on('click', function () {
+       weui.datePicker({
+        start: new Date().getFullYear(),
+        defaultValue:_nowDate,
+        end: new Date().getFullYear()+1,
+           onChange: function (result) {
+                var _result = formatDate(result);
+                $('#showDatePicker2').text(_result[0] + "-" + _result[1]+ "-" + _result[2])
+           },
+           onConfirm: function (result) {
+               //console.log(result);
+           }
+       });
+   });
+
+
+</script>
+</html>

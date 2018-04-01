@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/styles/css.css">
+    <title>制定新计划</title>
+</head>
+<body>
+    <div class="bh-app">
+    <div class="store-wrap">
+            <div class="bh-msg bh-msg-debit return-visit-new-paln-wrap">
+                <div class="msg-title">
+                    <input type="text" placeholder="标题" class="">
+                </div>
+                <div class="msg-body msg-offline-payment return-visit-plan-textarea">
+                    <div class="offline-payment-edit">
+                        <textarea class="weui-iput" placeholder="备注"></textarea>
+                    </div>
+                </div>
+            </div>
+        <div class="billing-oreder-confirm-money">
+            <button class="weui-btn weui-btn_primary">提交</button>
+        </div>
+    </div>
+</div>    
+</body>
+<script type="text/javascript" src="./public/javascript/main.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".msg-title input").on({
+            "focus": function(){
+                $(this).parent(".msg-title").addClass("foucs-title");
+            },
+            "blur": function(){
+                if($(this).val() == ""){
+                    $(this).parent(".msg-title").removeClass("foucs-title");
+                }
+            }
+        })
+    })
+</script>
+</html>

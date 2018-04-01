@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/styles/css.css">
+    <title>货品管理</title>
+</head>
+<body>
+    <div class="bh-app">
+    <div class="products-wrap">
+        <div class="products-banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#"><img src="./public/img/banar-1.jpg" alt=""></a>
+                        <h4>2017肠道新品上市1</h4>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="./public/img/banar-1.jpg" alt=""></a>
+                        <h4>2017肠道新品上市1</h4>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="./public/img/banar-1.jpg" alt=""></a>
+                        <h4>2017肠道新品上市1</h4>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="products-item-wrap">
+            <div class="products-item-list">
+                <div class="products-item">
+                    <a href="#">
+                        <img src="./public/images/products-item-1.png" alt="">
+                        <h3>现场发货</h3>
+                    </a>
+                </div>
+    
+                <div class="products-item">
+                    <a href="#">
+                        <img src="./public/images/products-item-2.png" alt="">
+                        <h3>我的库存</h3>
+                    </a>
+                </div>
+    
+                <div class="products-item">
+                    <a href="#">
+                        <img src="./public/images/products-item-3.png" alt="">
+                        <h3>我的库存</h3>
+                    </a>
+                </div>
+    
+                <div class="products-item">
+                    <a href="#">
+                        <img src="./public/images/products-item-4.png" alt="">
+                        <h3>按箱发货</h3>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="products-item-list">
+                <div class="products-item">
+                    <a href="#">
+                        <img src="./public/images/products-item-5.png" alt="">
+                        <h3>总裁订货</h3>
+                    </a>
+                </div>
+    
+                <div class="products-item">
+                    <a href="#">
+                        <img src="./public/images/products-item-6.png" alt="">
+                        <h3>下级代理</h3>
+                    </a>
+                </div>
+    
+    
+                <div class="products-item">
+                    <a href="#">
+                        <img src="./public/images/products-item-7.png" alt="">
+                        <h3>发货记录</h3>
+                    </a>
+                </div>
+    
+                <div class="products-item">
+                    <a href="#">
+                        <img src="./public/images/products-item-8.png" alt="">
+                        <h3>公司动态</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weui-tabbar bh-tabbar">
+            <a href="#" class="active">
+                <span class="icon"></span>
+                <h3>门店</h3>
+            </a>
+
+            <a href="#">
+                <span class="icon"></span>
+                <h3>货品</h3>
+            </a>
+
+            <a href="#">
+                <span class="icon"></span>
+                <h3>流水</h3>
+            </a>
+
+            <a href="#">
+                <span class="icon"></span>
+                <h3>门店</h3>
+            </a>
+        </div>
+    </div>
+</div>    
+</body>
+
+<script type="text/javascript" src="./public/javascript/main.js"></script>
+<script src="./public/javascript/swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var mySwiper = new Swiper ('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            setWrapperSize: true,
+            autoHeight: true,
+            pagination: '.swiper-pagination',
+        }); 
+    })            
+</script>
+</html>

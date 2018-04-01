@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/styles/css.css">
+    <title>我的收入</title>
+</head>
+<body>
+    <div class="bh-app">
+    <div class="my-income-wrap">
+        <div class="my-income-item my-income-item-intro">
+            <a href="#">
+                <p>我的收入</p>
+                <h3>￥8000.00</h3>
+            </a>
+        </div>
+
+        <div class="my-income-item">
+            <div class="my-income-item-head">
+                <h3>近7天收入</h3>
+                <span>￥3000.00</span>
+            </div>
+            <div id="my-income-chart" style="height:200px; width:100%;"></div>
+        </div>
+
+        <a href="#" class="my-income-menu-item">月收入状况情况</a>
+    </div>
+    
+</div>    
+</body>
+
+<script type="text/javascript" src="./public/javascript/main.js"></script>
+<script src="../public/javascript/echarts.simple.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+ 
+        var colors = ['#9F0777'];
+        option = {
+            color: colors,
+            grid: {
+                show: true,
+                top: 10,
+                left:15,
+                right:15,
+                bottom: 30,
+            },
+            xAxis: {
+                show:true,
+                axisLine: {
+                    show:true,
+                    lineStyle:{
+                        color:'#ccc'
+                    }
+                },
+                splitLine:{
+                    show:true
+                },
+                type: 'category',
+                data: ["08-20", "08-21", "08-22", "08-23", "08-24", "08-25"]
+            },
+            yAxis: {
+                show: false,
+                axisLine:{
+                    show:false
+                },
+                splitLine:{
+                    show:true
+                }
+            },
+            series: [
+                {
+                    name:'近7天收入',
+                    type:'line',
+                    smooth: true,
+                    label: {
+                        normal: {
+                            show: true,
+                            formatter:"￥{c}",
+                            position: 'bottom'
+                        }
+                    },
+                    data: [3209, 2519, 1331, 2807, 3813, 2982]
+                }
+            ]
+        };
+
+
+        var myIncomeChart = echarts.init(document.getElementById('my-income-chart'));
+        myIncomeChart.setOption(option);
+    })
+</script>
+</html>
