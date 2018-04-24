@@ -4,6 +4,7 @@ tags: 前端
 ---
 
 ### jQuery在Firefox不支持background-position-x解决办法
+
 原因很简单
 
 Firefox不支持类似于”backgroun-position-x,backgroun-position-y” 这样的属性

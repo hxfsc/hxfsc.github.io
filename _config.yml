@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 胡师寰
+title: 胡孝飞
 subtitle:
 description:
 author: Hu.Shihuan
@@ -66,7 +66,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: TKL
+theme: yilia
 
 
 

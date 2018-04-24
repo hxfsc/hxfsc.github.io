@@ -1,4 +1,4 @@
-title: jQuery在Firefox不支持background-position-x解决办法
+title: JavaScript 对象
 date: 2016-01-01 01:21:18
 tags: 前端, javascript
 ---
@@ -20,6 +20,7 @@ tags: 前端, javascript
    var obj = new Object();
 ```
 
+<!--more-->
 
 # defineProperties
 
@@ -28,6 +29,7 @@ tags: 前端, javascript
 ```javascript
 get set writeable enuerable configurable value
 ```
+
 # defineProperty
 
 ## 构造器和类型检测
@@ -60,7 +62,7 @@ get set writeable enuerable configurable value
         this.age = 30  //此属性实例对象可以访问
     }
 
-    Preson.prototype.count = 1 // prototype 共用属性 
+    Preson.prototype.count = 1 // prototype 共用属性
 ```
 
 
