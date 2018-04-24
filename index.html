@@ -146,6 +146,68 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-工具/一些开发相关配置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/03/22/工具/一些开发相关配置/" class="article-date">
+  	<time datetime="2018-03-22T11:05:20.000Z" itemprop="datePublished">2018-03-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/22/工具/一些开发相关配置/">工具</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一些开发相关配置">一些开发相关配置</h2><h3 id="直接_git_clone_git@github-com:hxfsc/front-end-project-git">直接 <code>git clone git@github.com:hxfsc/front-end-project.git</code></h3><ul>
+<li>Sublime Text VSCode 安装 <code>editorconfig 插件</code></li>
+<li>在项目目录新建 .editorconfig 文件 内容如下</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root = true&#10;&#10;[*]&#10;charset = utf-8&#10;indent_style = tab&#10;indent_size = 4&#10;end_of_line = lf&#10;insert_final_newline = true&#10;trim_trailing_whitespace = true</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具-前端工程/">工具, 前端工程</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2018/03/22/工具/一些开发相关配置/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-前端/2018 工作相关打算" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -372,16 +434,6 @@
       
         <h3 id="React">React</h3><p>循环生成列表</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">render()&#123;</span><br><span class="line">    return(</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            this.state.listData.map((d)=&gt;&#123;</span><br><span class="line">                return(</span><br><span class="line">                    &lt;li&gt;&#123;d&#125;&lt;li&gt;</span><br><span class="line">                )</span><br><span class="line">            &#125;)</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="React_Router">React Router</h3><ul>
-<li><h4 id="React_Router_2-x">React Router 2.x</h4></li>
-</ul>
-<h6 id="用法">用法</h6><p>  main.js</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./components/App/App.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Router, Route, hashHistory, IndexRoute&#125; <span class="keyword">from</span> <span class="string">'react-router'</span>;</span><br><span class="line"><span class="keyword">import</span> About <span class="keyword">from</span> <span class="string">'./components/About/About.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">'./components/Home/Home.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> NetWork <span class="keyword">from</span>  <span class="string">'./components/Network/Network.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> Wisdom <span class="keyword">from</span> <span class="string">'./components/Wisdom/Wisdom.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> WisdomBusinessTravel <span class="keyword">from</span> <span class="string">'./components/Wisdom/WisdomBusinessTravel.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> WisdomCar <span class="keyword">from</span> <span class="string">'./components/Wisdom/WisdomCar.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> WisdomPutAdv <span class="keyword">from</span> <span class="string">'./components/Wisdom/WisdomPutAdv.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> WisdomResearch <span class="keyword">from</span> <span class="string">'./components/Wisdom/WisdomResearch.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> Commtech <span class="keyword">from</span> <span class="string">'./components/Commtech/Commtech.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> CommtechAnalysis <span class="keyword">from</span> <span class="string">'./components/Commtech/CommtechAnalysis.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> CommtechMarketing <span class="keyword">from</span> <span class="string">'./components/Commtech/CommtechMarketing.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> CommtechPortrait <span class="keyword">from</span> <span class="string">'./components/Commtech/CommtechPortrait.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> Case <span class="keyword">from</span> <span class="string">'./components/Case/Case.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> CaseCar <span class="keyword">from</span> <span class="string">'./components/Case/CaseCar.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> CaseCMBC <span class="keyword">from</span> <span class="string">'./components/Case/CaseCMBC.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> CaseLancome <span class="keyword">from</span> <span class="string">'./components/Case/CaseLancome.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> CaseTea <span class="keyword">from</span> <span class="string">'./components/Case/CaseTea.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> News <span class="keyword">from</span> <span class="string">'./components/New/News.jsx'</span>;</span><br><span class="line"><span class="keyword">import</span> NewDetails <span class="keyword">from</span> <span class="string">'./components/New/NewDetails.jsx'</span>;</span><br><span class="line">ReactDOM.render((</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">Router</span> <span class="attribute">history</span>=<span class="value">&#123;hashHistory&#125;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">&#123;App&#125;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">IndexRoute</span> <span class="attribute">component</span>=<span class="value">&#123;Home&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/about"</span> <span class="attribute">component</span>=<span class="value">&#123;About&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/network"</span> <span class="attribute">component</span>=<span class="value">&#123;NetWork&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/wisdom"</span> <span class="attribute">component</span>=<span class="value">&#123;Wisdom&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/wisdom-business-travel"</span> <span class="attribute">component</span>=<span class="value">&#123;WisdomBusinessTravel&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/wisdom-car"</span> <span class="attribute">component</span>=<span class="value">&#123;WisdomCar&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/wisdom-put-adv"</span> <span class="attribute">component</span>=<span class="value">&#123;WisdomPutAdv&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/Wisdom-research"</span> <span class="attribute">component</span>=<span class="value">&#123;WisdomResearch&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/commtech"</span> <span class="attribute">component</span>=<span class="value">&#123;Commtech&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/commtech-analysis"</span> <span class="attribute">component</span>=<span class="value">&#123;CommtechAnalysis&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/commtech-marketing"</span> <span class="attribute">component</span>=<span class="value">&#123;CommtechMarketing&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/commtech-portrait"</span> <span class="attribute">component</span>=<span class="value">&#123;CommtechPortrait&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/case"</span> <span class="attribute">component</span>=<span class="value">&#123;Case&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/case-car"</span> <span class="attribute">component</span>=<span class="value">&#123;CaseCar&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/case-cmbc"</span> <span class="attribute">component</span>=<span class="value">&#123;CaseCMBC&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/case-lancome"</span> <span class="attribute">component</span>=<span class="value">&#123;CaseLancome&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/case-tea"</span> <span class="attribute">component</span>=<span class="value">&#123;CaseTea&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/news"</span> <span class="attribute">component</span>=<span class="value">&#123;News&#125;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/new-details/:id"</span> <span class="attribute">component</span>=<span class="value">&#123;NewDetails&#125;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">Route</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">Router</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">)</span>, <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>));</span><br></pre></td></tr></table></figure>
-<p> app.jsx</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="type">React</span> from <span class="symbol">'reac</span>t';</span><br><span class="line"><span class="keyword">import</span> <span class="type">Head</span> from '../<span class="type">Head</span>/<span class="type">Head</span>.jsx';</span><br><span class="line"><span class="keyword">import</span> <span class="type">Footer</span> from '../<span class="type">Footer</span>/<span class="type">Footer</span>.jsx';</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">React</span>.<span class="title">Component</span> &#123;</span></span><br><span class="line">    constructor(args) &#123;</span><br><span class="line">        <span class="keyword">super</span>(args);</span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;<span class="type">Head</span> /&gt;</span><br><span class="line">                &#123;<span class="keyword">this</span>.props.children&#125;</span><br><span class="line">                &lt;<span class="type">Footer</span> /&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export <span class="keyword">default</span> <span class="type">App</span>;</span><br></pre></td></tr></table></figure>
-<h6 id="参数链接">参数链接</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">Link</span> <span class="attribute">to</span>=<span class="value">&#123;`</span>/<span class="attribute">new-details</span>/$&#123;<span class="attribute">item.id</span>&#125;`&#125;&gt;</span></span><br></pre></td></tr></table></figure>
-<h6 id="Video标签_无法自动播放">Video标签 无法自动播放</h6><p>原因一  autoplay=”autoplay” 是 autoPlay</p>
-
       
     </div>
     
@@ -394,6 +446,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2017/04/10/前端/React相关/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -484,7 +540,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/01/前端/Object/">jQuery在Firefox不支持background-position-x解决办法</a>
+      <a class="article-title" href="/2016/01/01/前端/Object/">JavaScript 对象</a>
     </h1>
   
 
@@ -495,17 +551,6 @@
       
         <h2 id="Object">Object</h2><h3 id="创建方式">创建方式</h3><h3 id="字面量方式">字面量方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p = &#123;</span><br><span class="line">    key: value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="new_Object">new Object</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br></pre></td></tr></table></figure>
-<h1 id="defineProperties">defineProperties</h1><h3 id="理解">理解</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get set writeable enuerable configurable value</span><br></pre></td></tr></table></figure>
-<h1 id="defineProperty">defineProperty</h1><h2 id="构造器和类型检测">构造器和类型检测</h2><h3 id="构造器">构造器</h3><pre><code><span class="function"><span class="keyword">constructor</span>
-最顶级的构造器为<span class="title">Function</span><span class="params">()</span> 她自已的构造器为他本身
-次顶级的构造器为 <span class="title">Object</span> <span class="title">Math</span> <span class="title">Array</span>...</span>
-</code></pre><h3 id="检测">检测</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span></span><br><span class="line"><span class="keyword">instanceof</span> -&gt; 和构造器相关</span><br></pre></td></tr></table></figure>
-<h3 id="对象工厂">对象工厂</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">PersonFactory</span>(<span class="params"> name, age </span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        name: name,</span><br><span class="line">        age: age</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> p1 = PersonFactory( <span class="string">"Hu.Shihuan"</span>, <span class="number">22</span> );</span><br><span class="line"><span class="keyword">var</span> p2 = PersonFactory( <span class="string">"Google"</span>, <span class="number">22</span> )</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>此对象缺点是两者对象是独立，不能共用</p>
-<h2 id="构造器函数_contructor">构造器函数 <code>contructor</code></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> age = <span class="number">30</span>   <span class="comment">//此属性实例对象无法访问 只是作为内部成员变更</span></span><br><span class="line">    <span class="keyword">this</span>.age = <span class="number">30</span>  <span class="comment">//此属性实例对象可以访问</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Preson.prototype.count = <span class="number">1</span> <span class="comment">// prototype 共用属性</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-
       
     </div>
     
@@ -518,6 +563,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/01/01/前端/Object/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -920,6 +969,7 @@
 <p><a href="https://github.com/gabceb/jquery-browser-plugin" target="_blank" rel="external">https://github.com/gabceb/jquery-browser-plugin</a></p>
 <p>然后</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($.browser.mozilla)&#123;</span><br><span class="line">    $(elem).css(&#123;</span><br><span class="line">        <span class="string">"background-position"</span>:<span class="string">"center center"</span>,</span><br><span class="line">        <span class="string">"-moz-transition"</span>: <span class="string">"all 500ms ease"</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    $(elem).stop(<span class="literal">true</span>).animate(&#123;</span><br><span class="line">        <span class="string">"background-position-x"</span>:<span class="string">"-73px"</span>,</span><br><span class="line">        <span class="string">"background-position-y"</span>:<span class="string">"0px"</span></span><br><span class="line">    &#125;,<span class="number">300</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
