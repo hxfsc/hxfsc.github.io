@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <link rel="stylesheet" href="./public/styles/calendar.css">
+    <title>日历</title>
+</head>
+<body>
+    <div class="app">
+        <div class="flight-search-tool-tabbar">
+            <i class="arrow left"></i>
+            <div class="chioce-search-input-wrap flight-tabbar-info">
+                <span class="tips">选择去程日期</span>
+            </div>
+        </div>
+        
+        <div id="calendar-box">
+            <!-- <div class="calendar-wrap">
+                <div class="calendar-head">
+                    <span class="weekend">日</span>
+                    <span>一</span>
+                    <span>二</span>
+                    <span>三</span>
+                    <span>四</span>
+                    <span>五</span>
+                    <span class="weekend">六</span>
+                </div>
+
+                <div class="calendar-item">
+                    <h3>2017年10月</h3>
+                    <div class="calendar-tr">
+                        <span class="weekend useless">
+                            <i class="daily">27</i>
+                        </span>
+                        <span class="useless">
+                            <i class="daily">28</i>
+                        </span>
+                        <span class="useless">
+                            <i class="daily">29</i>
+                        </span>
+                        <span class="useless">
+                            <i class="daily">30</i>
+                        </span>
+                        <span>
+                            <i class="daily">1</i>
+                        </span>
+                        <span>
+                            <i class="daily">2</i>
+                        </span>
+                        <span class="weekend">
+                            <i class="daily">3</i>
+                        </span>
+                    </div>
+
+                    <div class="calendar-tr">
+                        <span class="weekend">
+                            <i class="daily">4</i>
+                        </span>
+                        <span>
+                            <i class="daily">5</i>
+                        </span>
+                        <span>
+                            <i class="daily">6</i>
+                        </span>
+                        <span>
+                            <i class="daily">7</i>
+                        </span>
+                        <span>
+                            <i class="daily">8</i>
+                        </span>
+                        <span>
+                            <i class="daily">9</i>
+                        </span>
+                        <span class="weekend">
+                            <i class="daily">10</i>
+                        </span>
+                    </div>
+
+                    <div class="calendar-tr">
+                        <span class="weekend">
+                            <i class="daily">11</i>
+                        </span>
+                        <span>
+                            <i class="daily">12</i>
+                        </span>
+                        <span>
+                            <i class="daily">13</i>
+                        </span>
+                        <span>
+                            <i class="daily">14</i>
+                        </span>
+                        <span>
+                            <i class="daily">15</i>
+                        </span>
+                        <span>
+                            <i class="daily">16</i>
+                        </span>
+                        <span class="weekend">
+                            <i class="daily">17</i>
+                        </span>
+                    </div>
+
+                    <div class="calendar-tr">
+                        <span class="weekend">
+                            <i class="daily">18</i>
+                        </span>
+                        <span>
+                            <i class="daily">19</i>
+                        </span>
+                        <span>
+                            <i class="daily">20</i>
+                        </span>
+                        <span>
+                            <i class="daily">21</i>
+                        </span>
+                        <span>
+                            <i class="daily">22</i>
+                        </span>
+                        <span>
+                            <i class="daily">23</i>
+                        </span>
+                        <span class="weekend">
+                            <i class="daily">24</i>
+                            <i class="price">￥870</i>
+                        </span>
+                    </div>
+
+                    <div class="calendar-tr">
+                        <span class="weekend">
+                            <i class="daily">25</i>
+                            <i class="price">￥870</i>
+                        </span>
+                        <span class="section to">
+                            <label>
+                                <i class="state">去程</i>
+                                <i class="daily">26</i>
+                                <i class="price">¥1380</i>
+                            </label>
+                        </span>
+                        <span class="section">
+                            <i class="daily">27</i>
+                            <i class="price">￥870</i>
+                        </span>
+                        <span class="section">
+                            <i class="daily">28</i>
+                            <i class="price">￥870</i>
+                        </span>
+                        <span class="section">
+                            <i class="daily">29</i>
+                            <i class="price">￥870</i>
+                        </span>
+                        <span class="section from">
+                            <label>
+                                <i class="state">返程</i>
+                                <i class="daily">30</i>
+                                <i class="price">¥1380</i>
+                            </label>
+                        </span>
+                        <span class="weekend">
+                            <i class="daily">31</i>
+                            <i class="price">¥1380</i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="calendar-item">
+                    <h3>2017年11月</h3>
+                    <div class="calendar-tr">
+                        <span class="weekend">
+                            <i class="daily">1</i>
+                        </span>
+                        <span>
+                            <i class="daily">2</i>
+                        </span>
+                        <span>
+                            <i class="daily">3</i>
+                        </span>
+                        <span>
+                            <i class="daily">4</i>
+                        </span>
+                        <span>
+                            <i class="daily">5</i>
+                        </span>
+                        <span>
+                            <i class="daily">6</i>
+                        </span>
+                        <span class="weekend">
+                            <i class="daily">7</i>
+                        </span>
+                    </div>
+
+                    <div class="calendar-tr">
+                        <span class="weekend">
+                            <i class="daily">8</i>
+                        </span>
+                        <span>
+                            <i class="daily">9</i>
+                        </span>
+                        <span>
+                            <i class="daily">10</i>
+                        </span>
+                        <span>
+                            <i class="daily">11</i>
+                        </span>
+                        <span>
+                            <i class="daily">12</i>
+                        </span>
+                        <span>
+                            <i class="daily">13</i>
+                        </span>
+                        <span class="weekend">
+                            <i class="daily">14</i>
+                        </span>
+                    </div>
+
+                    <div class="calendar-tr">
+                        <span class="weekend">
+                            <i class="daily">15</i>
+                        </span>
+                        <span>
+                            <i class="daily">16</i>
+                        </span>
+                        <span>
+                            <i class="daily">17</i>
+                        </span>
+                        <span>
+                            <i class="daily">18</i>
+                        </span>
+                        <span>
+                            <i class="daily">19</i>
+                        </span>
+                        <span>
+                            <i class="daily">20</i>
+                        </span>
+                        <span class="weekend">
+                            <i class="daily">21</i>
+                        </span>
+                    </div>
+
+                    <div class="calendar-tr">
+                        <span class="weekend">
+                            <i class="daily">22</i>
+                        </span>
+                        <span>
+                            <i class="daily">23</i>
+                        </span>
+                        <span>
+                            <i class="daily">24</i>
+                        </span>
+                        <span>
+                            <i class="daily">25</i>
+                        </span>
+                        <span>
+                            <i class="daily">26</i>
+                        </span>
+                        <span>
+                            <i class="daily">27</i>
+                        </span>
+                        <span class="weekend">
+                            <i class="daily">28</i>
+                        </span>
+                    </div>
+
+                    <div class="calendar-tr">
+                        <span class="weekend">
+                            <i class="daily">29</i>
+                        </span>
+                        <span>
+                            <i class="daily">30</i>
+                        </span>
+                        <span>
+                            <i class="daily">31</i>
+                        </span>
+                        <span class="useless">
+                            <i class="daily">1</i>
+                        </span>
+                        <span class="useless">
+                            <i class="daily">2</i>
+                        </span>
+                        <span class="useless">
+                            <i class="daily">3</i>
+                        </span>
+                        <span class="weekend useless">
+                            <i class="daily">4</i>
+                        </span>
+                    </div>
+                </div>
+
+            </div> -->
+
+        </div>
+            
+    </div>
+</body>
+<script type="text/javascript" src="../public/javascript/jquery.js"></script>
+<script type="text/javascript" src="../public/javascript/js.cookie.js"></script>
+<script type="text/javascript" src="../public/javascript/fastclick.js"></script>
+<script type="text/javascript" src="../public/javascript/calendar.js"></script>
+<script type="text/javascript">
+    
+    $(function(){
+        FastClick.attach(document.body)
+        $().Calendar("#calendar-box", 12)
+        $().setPrice([
+            "￥870",
+            "￥170",
+            "￥270",
+            "￥230",
+            "￥840",
+            "￥870",
+            "￥1230"
+        ])
+
+        var _search = decodeURIComponent(window.location.search).match(/\w+=(\w+\/\w+\/\w+)(&\w+=(\w+\/\w+\/\w+)){0,1}/)
+        
+        
+        if(_search != undefined){
+            if(_search[1] != undefined){
+                //console.log(_search[1])
+                $().SetCalendar(_search[1])
+            }
+
+            if(_search[3] != undefined){
+                //console.log(_search[3])
+                $().SetCalendar(_search[3], to=true)
+            }
+        }else{
+            $().SetCalendar()
+        }
+        
+
+
+        
+
+
+    })
+</script>
+</html>

@@ -1,0 +1,49 @@
+#calendar-box-wrap { position: absolute; top: 0; left: 0; width: 100%; z-index: 999; }
+
+#calendar-box-wrap .tabbar-text { font-size: 16px; padding-left: 20px; }
+
+.calendar-wrap { background: #FFF; font-size: 15px; }
+
+.calendar-wrap .calendar-head { border-top: 1px solid #E4E4E4; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; height: 50px; text-align: center; }
+
+.calendar-wrap .calendar-head span { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+
+.calendar-item h3 { height: 50px; line-height: 50px; text-align: center; }
+
+.calendar-item .calendar-tr { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+
+.calendar-item .calendar-tr span { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; text-align: center; height: 50px; line-height: 50px; position: relative; overflow: hidden; }
+
+.calendar-item .calendar-tr span.section { background: #E8F4FF; }
+
+.calendar-item .calendar-tr span.section.to { border-top-left-radius: 5px; border-bottom-left-radius: 5px; }
+
+.calendar-item .calendar-tr span.section.from { border-top-right-radius: 5px; border-bottom-right-radius: 5px; }
+
+.calendar-item .calendar-tr span i { font-size: 11px; position: relative; }
+
+.calendar-item .calendar-tr span i.daily { font-size: 15px; position: absolute; left: 0; top: 0; width: 100%; height: 100%; text-align: center; }
+
+.calendar-item .calendar-tr span i.price { color: #B4B4B4; left: 0; top: 15px; position: absolute; height: 100%; width: 100%; text-align: center; display: block; }
+
+.calendar-item .calendar-tr span.to-trip label, .calendar-item .calendar-tr span.from-trip label { background: #5DCBFE; color: #FFF; }
+
+.calendar-item .calendar-tr span.to-trip label i.price, .calendar-item .calendar-tr span.from-trip label i.price { color: #FFF; }
+
+.calendar-item .calendar-tr span label { color: #000; display: block; height: 100%; width: 100%; border-radius: 5px; position: relative; }
+
+.calendar-item .calendar-tr span label i.price { display: block; width: 100%; height: 100%; top: 0; left: 0; margin-left: 0; top: 15px; position: absolute; }
+
+.calendar-item .calendar-tr span label i.daily { position: relative; width: 100%; height: 100%; text-align: center; display: block; }
+
+.calendar-item .calendar-tr span label i.state { color: #FFF; position: absolute; display: block; top: -15px; width: 100%; left: 0px; height: 100%; text-align: center; }
+
+.calendar-item .calendar-tr span.weekend label i.daily { color: #E76B7A; }
+
+.calendar-item .calendar-tr span.useless label i.daily { color: #B4B4B4; }
+
+.toast-bg { background: rgba(0, 0, 0, 0.8); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 999; }
+
+.toast-wrap { position: absolute; top: 0; left: 0; z-index: 1000; text-align: center; width: 100%; }
+
+.toast-wrap h3 { display: block; width: 100px; height: 50px; background: #FFF; border-radius: 5px; color: #000; padding: 5px 10px; margin: 0 auto; }

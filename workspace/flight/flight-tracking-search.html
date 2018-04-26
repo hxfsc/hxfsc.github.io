@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <title>返程航班搜索列表</title>
+</head>
+<body>
+
+    <div class="app">
+        <div class="flight-search-tool-tabbar">
+            <i class="arrow left"></i>
+            <div class="chioce-search-input-wrap flight-tabbar-info">
+                <span class="tips">单程航班搜索列表</span>
+            </div>
+        </div>
+    
+        <div class="flight-search-list-container">
+            <div class="flight-search-list">
+                <i class="circle left"></i>
+                <i class="circle right"></i>
+
+                <div class="flight-search-list-head">
+                    <img src="./public/img/a-3.jpg" alt="">
+                    <div class="flight-search-list-tips">
+                        <span>山东航空</span>
+                        <span>官方旗舰店</span>
+                    </div>
+                </div>
+
+                <div class="flight-search-list-details clearfix">
+                    <div class="flight-search-details-item form">
+                        <h3>18:40</h3>
+                        <h4>首都T3</h4>
+                    </div>
+            
+                    <div class="flight-search-details-item take-time">
+                        <h3>3小时</h3>
+                        <h4>直飞</h4>
+                    </div>
+
+                    <div class="flight-search-details-item to">
+                        <h3>23:10</h3>
+                        <h4>江北T3</h4>
+                    </div>
+            
+                    <div class="flight-search-details-item price">
+                        <h3><i>¥</i>1306</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flight-search-list">
+                <i class="circle left"></i>
+                <i class="circle right"></i>
+
+                <div class="flight-search-list-head">
+                    <img src="./public/img/a-1.jpg" alt="">
+                    <div class="flight-search-list-tips">
+                        <span>华夏航空</span>
+                        <span>官方旗舰店</span>
+                    </div>
+                </div>
+
+                <div class="flight-search-list-details clearfix">
+                    <div class="flight-search-details-item form">
+                        <span class="share">共享航班</span>
+                        <h3>18:40</h3>
+                        <h4>首都T3</h4>
+                    </div>
+            
+                    <div class="flight-search-details-item take-time">
+                        <h3>3小时5分钟</h3>
+                        <h4>直飞</h4>
+                    </div>
+
+                    <div class="flight-search-details-item to">
+                        <h3>23:10</h3>
+                        <h4>江北T3</h4>
+                    </div>
+            
+                    <div class="flight-search-details-item price">
+                        <h3><i>¥</i>1327</h3>
+                        <h4>儿童¥620</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flight-search-list">
+                <i class="circle left"></i>
+                <i class="circle right"></i>
+
+                <div class="flight-search-list-head">
+                    <img src="./public/img/a-2.jpg" alt="">
+                    <div class="flight-search-list-tips">
+                        <span>四川航空</span>
+                        <span>官方旗舰店</span>
+                    </div>
+                </div>
+
+                <div class="flight-search-list-details clearfix">
+                    <div class="flight-search-details-item form">
+                        <h3>18:40</h3>
+                        <h4>首都T3</h4>
+                    </div>
+            
+                    <div class="flight-search-details-item take-time">
+                        <h3>3小时</h3>
+                        <h4>经停-成都</h4>
+                    </div>
+
+                    <div class="flight-search-details-item to">
+                        <h3>23:10</h3>
+                        <h4>江北T3</h4>
+                        <i class="add-day">+1天</i>
+                    </div>
+            
+                    <div class="flight-search-details-item price">
+                        <h3><i>¥</i>1309</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabbar flight-search-tabbar">
+            <div class="tabbar-list" id="tabbar-filter-btn">
+                <i></i>
+                <p>筛选</p>
+            </div>
+
+            <div class="tabbar-list">
+                <i></i>
+                <p>时间</p>
+            </div>
+
+            <div class="tabbar-list">
+                <i></i>
+                <p>价格</p>
+            </div>
+
+            <div class="tabbar-list">
+                <i></i>
+                <p>价格日历</p>
+            </div>
+        </div>
+
+        <div class="dialog"></div>
+        <div class="filter-box">
+            <div class="filter-box-container">
+                <div class="filter-box-tab-head">
+                    <h3 class="on">直飞/经停</h3>
+                    <h3>起飞时段</h3>
+                    <h3>航空公司</h3>
+                    <h3>起落机场</h3>
+                </div>
+
+                <div class="filter-box-tab-content">
+                    <div class="filter-box-tab-item" style="display: block;">
+                        <div class="lfilter-box-tab-li">
+                            <span>直飞</span>
+                            <label><input type="checkbox" /><i></i></label>
+                        </div>
+
+                        <div class="lfilter-box-tab-li">
+                            <span>经停</span>
+                            <label><input type="checkbox" /><i></i></label>
+                        </div>
+                    </div>
+
+                    <div class="filter-box-tab-item">
+                        <div class="lfilter-box-tab-li">
+                            <span>0:00-06:00</span>
+                            <label><input type="checkbox" /><i></i></label>
+                        </div>
+
+                        <div class="lfilter-box-tab-li">
+                            <span>06:00-12:00</span>
+                            <label><input type="checkbox" /><i></i></label>
+                        </div>
+
+                        <div class="lfilter-box-tab-li">
+                            <span>12:00-18:00</span>
+                            <label><input type="checkbox" /><i></i></label>
+                        </div>
+
+                        <div class="lfilter-box-tab-li">
+                            <span>18:00-24:00</span>
+                            <label><input type="checkbox" /><i></i></label>
+                        </div>
+                    </div>
+
+                    <div class="filter-box-tab-item">
+                        <div class="lfilter-box-tab-li">
+                            <span><img src="./public/img/a-1.jpg" alt="">山航</span>
+                            <label><input type="checkbox" /><i></i></label>
+                        </div>
+
+                        <div class="lfilter-box-tab-li">
+                            <span><img src="./public/img/a-2.jpg" alt="">南航</span>
+                            <label><input type="checkbox" /><i></i></label>
+                        </div>
+
+                        <div class="lfilter-box-tab-li">
+                            <span><img src="./public/img/a-3.jpg" alt="">华夏航空</span>
+                            <label><input type="checkbox" /><i></i></label>
+                        </div>
+
+                        <div class="lfilter-box-tab-li">
+                            <span><img src="./public/img/a-3.jpg" alt="">国航</span>
+                            <label><input type="checkbox" /><i></i></label>
+                        </div>
+                    </div>
+
+                    <div class="filter-box-tab-item">
+                        <dl>
+                            <dt>起飞机场</dt>
+                            <dd><span>首都机场</span> <label><input type="checkbox" /><i></i></label></dd>
+                        </dl>
+
+                        <dl>
+                            <dt>降落机场</dt>
+                            <dd><span>江北机场</span> <label><input type="checkbox" /><i></i></label></dd>
+                        </dl>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="filter-box-foot">
+                <button class="btn btn-clearall">清空全部</button>
+                <button class="btn btn-done">完成</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+<script type="text/javascript" src="./public/javascript/jquery.js"></script>
+<script type="text/javascript" src="./public/javascript/fastclick.js"></script>
+<script type="text/javascript">
+    $(function(){
+        FastClick.attach(document.body)
+        $(".dialog").css({
+            width: $(window).width(),
+            height: $(window).height() > $("body").height() ? $(window).height() + 50 : $("body").height() + 50
+        })
+
+        //选择筛选
+        $("#tabbar-filter-btn").on("click", function(){
+            $(".dialog").fadeIn('fast')
+            $(".filter-box").fadeIn('fast')
+        })
+
+        //tab 切换
+        var _tabHead = $(".filter-box-tab-head h3"), 
+            _tabItem = $(".filter-box-tab-item")
+
+        _tabHead.on("click", function(){
+            var _this = $(this)
+            var _index = _this.index()
+
+            _this.addClass("on").siblings().removeClass("on")
+            _tabItem.eq(_index).css("display","block").siblings().css("display","none")
+        })
+
+        //清空全部
+        var _checkedItem = $(".filter-box-tab-content input");
+        $(".btn-clearall").on("click", function(){
+            _checkedItem.prop("checked", false)
+        })
+
+        //完成
+        $(".btn-done").on("click", function(){
+            $(".dialog").fadeOut('fast')
+            $(".filter-box").fadeOut('fast')
+        })
+
+        $(".lfilter-box-tab-li").on("click", function(){
+            if($(this).find("input").prop("checked")){
+                $(this).addClass("active")
+            }else{
+                $(this).removeClass("active")
+            }
+        })
+
+    })
+</script>
+
+</html>

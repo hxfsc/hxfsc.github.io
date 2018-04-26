@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <link rel="stylesheet" href="./public/styles/calendar.css">    
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1" class="needsclick" readonly>
+    <br>
+    <hr>
+    <input type="text" id="input2" class="needsclick" readonly>
+    <br>
+    <hr>
+    <input type="text" id="input3" class="needsclick" readonly>
+    <br>
+    <hr>
+    <input type="text" id="input4" class="needsclick" readonly>
+    <br>
+    <hr>
+    <input type="text" id="input5" class="needsclick" readonly>
+
+</body>
+<script type="text/javascript" src="./public/javascript/jquery.js"></script>
+<script type="text/javascript" src="./public/javascript/fastclick.js"></script>
+<script type="text/javascript" src="./public/javascript/moment.min.js"></script>
+<script type="text/javascript" src="./public/javascript/calendar.js"></script>
+<script type="text/javascript">
+    $(function(){
+        function getDate(date){
+            var _date = "";
+            //2017年12月10日, 周日
+            var _reg = new RegExp(/(\w+)年(\w+)月(\w+)日/)
+            _date = date.match(_reg)[1] + "-" + date.match(_reg)[2] + "-" + date.match(_reg)[3]
+            return _date;
+        }
+        $("#input1").on("focus", function(){
+            $.calendar({
+                input: $(this),
+                opearaction: "go",
+                startTime: $(this).val() != "" ? getDate($(this).val()) : "",
+                endTime: $("#input2").val() != "" ? getDate($("#input2").val()) : "",
+                toolbarText: "选择返程日期",
+                price: [{time:"2017-11-21",price: "￥1122"}, 
+                        {time:"2017-11-22",price: "￥1122"},
+                        {time:"2017-11-26",price: "￥1122"},
+                        {time:"2017-11-27",price: "￥122"},
+                        {time:"2017-11-28",price: "￥322"},
+                        {time:"2017-11-29",price: "￥22"},
+                ]
+            })
+        })
+
+
+        $("#input2").on("focus", function(){
+            $.calendar({
+                input: $(this),
+                opearaction: "back",
+                startTime: "2017-11-12",
+                price:[
+                    {time:"2017-12-02",price: "￥22"},
+                ]
+            })
+        })
+
+        $("#input3").on("focus", function(){
+            $.calendar({
+                input: $(this),
+                opearaction: "back",
+                startTime: "",
+                endTime: "2017-11-27"
+            })
+        })
+
+        $("#input4").on("focus", function(){
+            $.calendar({
+                input: $(this),
+                opearaction: "go",
+                startTime: "2017-11-27"
+            })
+        })
+
+        $("#input5").on("focus", function(){
+            $.calendar({
+                input: $(this),
+                opearaction: "back"
+            })
+        })
+
+
+    })
+</script>
+</html>

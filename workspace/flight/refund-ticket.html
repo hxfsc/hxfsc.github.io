@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <title>申请退票</title>
+</head>
+<body>
+    <div class="app">
+        <div class="flight-search-tool-tabbar">
+            <i class="arrow left"></i>
+            <div class="chioce-search-input-wrap flight-tabbar-info">
+                <span class="tips">申请退票</span>
+            </div>
+        </div>
+
+        <div class="refund-ticket-wrap">
+            <div class="refund-ticket-box">
+                <div class="refund-ticket-item">
+                    <span>退票原因</span>
+                    <input type="text" placeholder="请选择退票原因" id="reasons_input" readonly>
+                    <i></i>
+                </div>
+
+                <p class="refund-ticket-tips">退改签说明</p>
+            </div>  
+
+            <div class="refund-ticket-box">
+                <h3>选择退票乘机人</h3>
+                <div class="refund-ticket-item refund-ticket-person">
+                    <span>王跃</span>
+                    <div class="ticket-item-tips">成人票</div>
+                    <label>
+                        <input type="radio" name="person" checked>
+                        <i></i>
+                    </label>
+                </div>
+
+                <div class="refund-ticket-item refund-ticket-person noborder">
+                    <span>王跃</span>
+                    <div class="ticket-item-tips">成人票</div>
+                    <label>
+                        <input type="radio" name="person">
+                        <i></i>
+                    </label>
+                </div>
+            </div> 
+
+            <p class="refund-ticket-explain">注：实际退票金额以航司处理为准</p>          
+        </div>
+        
+
+        <div class="refund-ticket-foot">
+            <button>申请退票</button>
+        </div>
+    </div>
+
+    <div class="dialog"></div>
+    <div class="refund-ticket-dialog">
+        <div class="refund-ticket-dialog-wrap" id="refund-ticket-dialog-wrap">
+            <h3>请选择退票原因<i>（退票原因影响最后退票费用）</i></h3>
+            <ul>
+                <li><label><input type="radio" name="refund-ticket-reasons"><i></i></label>行程计划改变</li>
+                <li><label><input type="radio" name="refund-ticket-reasons"><i></i></label>选错日期或航班</li>
+                <li><label><input type="radio" name="refund-ticket-reasons"><i></i></label>乘机人信息填写错误</li>
+                <li><label><input type="radio" name="refund-ticket-reasons"><i></i></label>航班已取消或延误</li>
+                <li><label><input type="radio" name="refund-ticket-reasons"><i></i></label>航班时刻发生变化</li>
+                <li><label><input type="radio" name="refund-ticket-reasons"><i></i></label>其他原因</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./public/javascript/jquery.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".dialog").css({
+            width: $(window).width(),
+            height: $(window).height() > $("body").height() ? $(window).height() + 50 : $("body").height() + 50
+        })
+
+        $("#reasons_input, #reasons_input + i").on("click", function(){
+            $(".dialog").fadeIn('fast')
+            $("#refund-ticket-dialog-wrap").fadeIn('fast')
+        })
+
+         $(".dialog").on("click", function(){
+            $(".dialog").fadeIn('fast')
+            $("#refund-ticket-dialog-wrap").fadeIn('fast')
+         })
+
+        $("#refund-ticket-dialog-wrap li").on("click", function(){
+            var $_reasons_text = $(this).text()
+            $(this).find("input:radio").prop("checked", true)
+            $("#reasons_input").attr("value", $_reasons_text)
+
+            $("#refund-ticket-dialog-wrap").fadeOut('fast')
+            $(".dialog").fadeOut('fast')
+        })
+    })
+</script>
+</html>

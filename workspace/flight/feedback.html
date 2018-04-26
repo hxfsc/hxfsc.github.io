@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <title>意见反馈</title>
+</head>
+<body>
+    <div class="app">
+        <style type="text/css">
+            html, body{ background: #FFF; }
+        </style>
+        <div class="flight-search-tool-tabbar">
+            <i class="arrow left"></i>
+            <div class="chioce-search-input-wrap flight-tabbar-info">
+                <span class="tips">意见反馈</span>
+            </div>
+        </div>
+
+        <div class="login-wrap">
+            <div class="login-border"></div>
+            
+            <div class="feedback-textarea">
+                <textarea placeholder="请输入您的意见或建议"></textarea>
+                <i>300</i>
+            </div>
+
+            <div class="feedback-phone">
+                <input type="text" placeholder="请输入你的手机号码">
+            </div>    
+        
+            <div class="login-operation feedback-opearation">
+                <button>提交</button>
+            </div>
+        </div>
+    
+    
+    </div>
+</body>
+
+<script type="text/javascript" src="./public/javascript/jquery.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var $_allowText = $(".feedback-textarea i")
+        var $_allowTextLength = $_allowText.text()
+        $(".feedback-textarea textarea").on("keypress", function(e){
+            var $_text = $(this).val()
+            if($_allowTextLength >= $_text.length){
+                $_allowText.text($_allowTextLength-$_text.length)
+            }else{
+                e.preventDefault()
+            }
+        })
+    })
+</script>
+
+</html>
