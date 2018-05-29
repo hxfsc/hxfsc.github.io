@@ -3,17 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 工具, Mac | 胡孝飞</title>
+  <title>如何在终端使用VSCode, Sublime, Atom打开当前工程目录 | 胡孝飞</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="胡孝飞">
-<meta property="og:url" content="http://yoursite.com/tags/工具-Mac/index.html">
+  <meta name="description" content="使用VSCode, Sublime, Atom打开当前工程目录
+使用 sudo vi ~/.zshrc打开zshell的配置文件
+
+在文件里面加入下面三行
+1alias atom=&amp;#39;/Applications/Atom.app/Contents/MacOS/Atom&amp;#39;&amp;#10;alias subl=&amp;#39;/Applications/SublimeText.app/Content">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在终端使用VSCode, Sublime, Atom打开当前工程目录">
+<meta property="og:url" content="http://yoursite.com/2018/05/20/前端/如何在终端使用vscode sublime打开当前工程目录/index.html">
 <meta property="og:site_name" content="胡孝飞">
-<meta property="og:description">
+<meta property="og:description" content="使用VSCode, Sublime, Atom打开当前工程目录
+使用 sudo vi ~/.zshrc打开zshell的配置文件
+
+在文件里面加入下面三行
+1alias atom=&amp;#39;/Applications/Atom.app/Contents/MacOS/Atom&amp;#39;&amp;#10;alias subl=&amp;#39;/Applications/SublimeText.app/Content">
+<meta property="og:updated_time" content="2018-05-29T03:25:59.185Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡孝飞">
-<meta name="twitter:description">
+<meta name="twitter:title" content="如何在终端使用VSCode, Sublime, Atom打开当前工程目录">
+<meta name="twitter:description" content="使用VSCode, Sublime, Atom打开当前工程目录
+使用 sudo vi ~/.zshrc打开zshell的配置文件
+
+在文件里面加入下面三行
+1alias atom=&amp;#39;/Applications/Atom.app/Contents/MacOS/Atom&amp;#39;&amp;#10;alias subl=&amp;#39;/Applications/SublimeText.app/Content">
   
     <link rel="alternative" href="/atom.xml" title="胡孝飞" type="application/atom+xml">
   
@@ -118,53 +131,76 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-前端/如何在终端使用vscode sublime打开当前工程目录" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/18/工具/AutoJump 使用/" class="archive-article-date">
-  	<time datetime="2017-05-18T02:05:20.000Z" itemprop="datePublished">May 18</time>
+    <div class="article-meta">
+      <a href="/2018/05/20/前端/如何在终端使用vscode sublime打开当前工程目录/" class="article-date">
+  	<time datetime="2018-05-20T03:07:20.000Z" itemprop="datePublished">2018-05-20</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/18/工具/AutoJump 使用/">工具</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何在终端使用VSCode, Sublime, Atom打开当前工程目录
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具-Mac/">工具, Mac</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端-前端工程/">前端, 前端工程</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用VSCode,_Sublime,_Atom打开当前工程目录">使用VSCode, Sublime, Atom打开当前工程目录</h1><ul>
+<li><p>使用 <code>sudo vi ~/.zshrc</code>打开zshell的配置文件</p>
+</li>
+<li><p>在文件里面加入下面三行</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alias atom=&#39;/Applications/Atom.app/Contents/MacOS/Atom&#39;&#10;alias subl=&#39;/Applications/SublimeText.app/Contents/SharedSupport/bin/subl&#39;&#10;alias vscode=&#39;/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code&#39;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后 <code>source ~/.zshrc</code> 即可使用 <code>vscode ./</code> 打开当前目录了</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/22/工具/一些开发相关配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">工具</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
 
 </div>
       <footer id="footer">
@@ -190,9 +226,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
