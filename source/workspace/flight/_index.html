@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <link rel="stylesheet" href="./public/styles/calendar.css">
+    <title>航班</title>
+</head>
+<body>
+    <div class="app">
+
+        <div class="flight-choice"> 
+            <h4 class="text-tips">出发和到达城市</h4>
+            <div class="flight-choice-wrap">
+                <div class="flight-choice-list">
+                    <div class="choice-list-box choice-list-city border-bottom">
+                        <i></i>
+                        <input type="text" id="trip-city" placeholder="北京" value="北京" />
+                    </div>
+                </div>
+
+                <div class="flight-choice-list">
+                    <div class="choice-list-box choice-list-city">
+                        <i class="back"></i>
+                        <input type="text" id="back-city" placeholder="重庆" value="重庆" />
+                    </div>
+                </div>
+
+                <div class="switch-city" id="switch-city"></div>
+
+            </div>
+        </div>
+        
+
+        <div class="flight-choice"> 
+            <h4 class="text-tips">日期</h4>
+            <div class="flight-choice-wrap">
+                <div class="flight-choice-list">
+                    <div class="choice-list-box choice-list-date border-bottom">
+                        <input type="text" placeholder="请选择出发日期" class="needsclick" id="trip-tracking" />
+                    </div>
+
+                    <div class="choice-list-box choice-list-date">
+                        <input type="text" placeholder="请选择返程日期" class="needsclick" id="back-tracking" />
+                    </div>
+
+                    <div class="switch-city-white"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flight-choice"> 
+            <h4 class="text-tips">乘客和舱位</h4>
+            <div class="flight-choice-wrap">
+                <div class="flight-choice-list">
+                    <div class="choice-list-box">
+                        <div class="checkbox-list">
+                            <label class="children">
+                                <input type="checkbox" />
+                                <i></i>
+                                <p>携带儿童</p>
+                                <i>&nbsp;2-12岁</i>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-list">
+                            <label>
+                                <input type="checkbox" />
+                                <i></i>
+                                <p>经济舱</p>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-list">
+                            <label>
+                                <input type="checkbox" />
+                                <i></i>
+                                <p>商务／头等舱</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flight-box-action">
+            <button class="btn btn-query"><a href="./flight-tracking-search.html">搜索航班</a></button>
+        </div>
+
+    
+        <div class="tabbar">
+            <div class="tabbar-list active">
+                <a href="./_index.html">
+                    <i></i>
+                    <p>机票</p>
+                </a>
+            </div>
+
+            <div class="tabbar-list">
+                <a href="./my-center.html">
+                    <i></i>
+                    <p>我的</p>
+                </a>
+            </div>
+        </div>
+    
+    </div>
+</body>
+<script type="text/javascript" src="./public/javascript/jquery.js"></script>
+<script type="text/javascript" src="./public/javascript/moment.min.js"></script>
+<script type="text/javascript" src="./public/javascript/calendar.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        function getDate(date){
+            var _date = "";
+            //2017年12月10日, 周日
+            var _reg = new RegExp(/(\w+)年(\w+)月(\w+)日/)
+            _date = date.match(_reg)[1] + "-" + date.match(_reg)[2] + "-" + date.match(_reg)[3]
+            return _date;
+        }
+
+        $("#switch-city").on("click", function(){
+            var $_tripCityText = $("#trip-city").val()
+            var $_backCityText = $("#back-city").val()
+
+            $("#trip-city").val($_backCityText)
+            $("#back-city").val($_tripCityText)
+
+        })
+
+    
+        $(".close").on("click", function(){
+            $(this).prev("input").val("")
+        })
+
+        $("#trip-tracking").on("focus", function(){
+            $.calendar({
+                input: $(this),
+                opearaction: "go",
+                toolbarText: "选择去程日期",
+                startTime: $("#trip-tracking").val() != "" ? getDate($("#trip-tracking").val()) : "",
+                endTime:$("#back-tracking").val() != "" ? getDate($("#back-tracking").val()) : "",
+                callback: function(){
+                    if($("#trip-tracking").val() != "" && $("#trip-tracking").parent().find(".close").length == 0){
+                        $("#trip-tracking").parent().append($("<i class=\"close\"></i>"))
+                    }
+                }
+            })
+        })
+
+
+        $("#back-tracking").on("focus", function(){
+            $.calendar({
+                input: $(this),
+                opearaction: "back",
+                toolbarText: "选择返程日期",
+                startTime: $("#trip-tracking").val() != "" ? getDate($("#trip-tracking").val()) : "",
+                endTime: $("#back-tracking").val() != "" ? getDate($("#back-tracking").val()) : "",
+                callback: function(){
+                    if($("#back-tracking").val() != "" && $("#back-tracking").parent().find(".close").length == 0){
+                        $("#back-tracking").parent().append($("<i class=\"close\"></i>"))
+                    }
+                }
+            })
+        })
+
+
+        $("body").on("click", ".close", function(){
+            $(this).prev().val("")
+            $(this).remove()
+        })
+
+
+
+
+    })
+</script>
+</html>
