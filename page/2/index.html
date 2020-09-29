@@ -1,614 +1,549 @@
 <!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
-  
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
   <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="default">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+
   
-  <link rel="stylesheet" href="/css/style.css">
-  
-</head></html>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="https://avatars0.githubusercontent.com/u/833242?v=3&amp;s=460" class="js-avatar">
-			
-		</a>
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
-		</hgroup>
+<!--
+<body class="home-template">
+-->
+<body id="index" class="lightnav animsition">
 
-		
+      <!-- ============================ Off-canvas navigation =========================== -->
 
-		
-
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="https://github.com/hxfsc" title="github">github</a>
-					        
-								<a class="weibo" target="_blank" href="https://weibo.com/hxfsc" title="weibo">weibo</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				
-				
-
-				
-
-				
-
-			</div>
-			
-		</div>
-	</header>
-
-</div>
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
     </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img lazy-src="https://avatars0.githubusercontent.com/u/833242?v=3&amp;s=460" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author">John Doe</h1>
-			</hgroup>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="https://github.com/hxfsc" title="github">github</a>
-			        
-						<a class="weibo" target="_blank" href="https://weibo.com/hxfsc" title="weibo">weibo</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-      <div class="body-wrap">
-  
-    <article id="post-PHP/安装LNMP提示 proc_open错误" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/22/PHP/安装LNMP提示 proc_open错误/" class="article-date">
-  	<time datetime="2015-11-21T20:02:13.000Z" itemprop="datePublished">2015-11-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <!--li><a href="/" class="animsition-link">Hexo</a></li-->
+                            <li class="nolink"><!--span>日落这种东西，只要活着就能随时看到。 峰仓和也--《最游记》</span--></li>
+                            
+                            <li><a href="https://github.com/hxfsc" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/hxfsc" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/22/PHP/安装LNMP提示 proc_open错误/">安装LNMP提示 proc_open错误</a>
-    </h1>
-  
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="安装LNMP提示-proc-open错误"><a href="#安装LNMP提示-proc-open错误" class="headerlink" title="安装LNMP提示 proc_open错误"></a>安装LNMP提示 proc_open错误</h3><p>在lnmp环境下安装Laravel提示错误<br>​<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The Process class relies on proc_open, which is not available on your PHP installation.</span><br></pre></td></tr></table></figure></p>
-<p>到 <code>/usr/local/php/etc/php.ini</code> 寻找 <code>disable_functions</code> 字段 然后删除 <code>scandir</code> 字段即可 </p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Laravel/">Laravel</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Rails/Rails 数据交互" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/10/11/Rails/Rails 数据交互/" class="article-date">
-  	<time datetime="2015-10-10T19:44:25.000Z" itemprop="datePublished">2015-10-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/11/Rails/Rails 数据交互/">Rails 数据交互</a>
-    </h1>
-  
+      <!-- ============================ Hero Image =========================== -->
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Rails-数据交互"><a href="#Rails-数据交互" class="headerlink" title="Rails 数据交互"></a>Rails 数据交互</h3><p><strong>ActiveRecord</strong><br><em>创建模型</em></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails generate model user userName:string email:string</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>创建的<code>model</code>使用的是单数 而创建 <code>controller</code> 则用复数</p>
-</blockquote>
-<p><strong>迁移数据</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake db:migrate</span><br></pre></td></tr></table></figure>
-<p><strong>进入控制台</strong> <code>rails console</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@user = User.new(:userName =&gt; 'Hu.Shihuan', :email =&gt; 'hxfsc@qq.com')</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@user.save()</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.find(1)</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.all()</span><br></pre></td></tr></table></figure>
-<p><strong>数据验证</strong></p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">validates <span class="symbol">:userName</span>, <span class="symbol">presence:</span><span class="literal">true</span>, <span class="symbol">length:</span>&#123;<span class="symbol">maximun:</span><span class="number">20</span>&#125;   存在性验证,长度不能大于<span class="number">20</span></span><br><span class="line">EMAIL = <span class="regexp">/+@/i</span>  /<span class="regexp">/邮箱验证</span></span><br><span class="line"><span class="regexp">validates:email, presence:true，length&#123;maximun:255&#125;，format:&#123;with:EMAIL&#125;,uniquenese:&#123; case\_sensitive: false&#125; | true  存在性验证,长度不能大于255,正则匹配，唯一性验证[不加case_sensitive 则为大小写不敏感]</span></span><br></pre></td></tr></table></figure>
-<p><strong>查看错误信息</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@user.errors.full_message</span><br></pre></td></tr></table></figure>
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img2.png) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
 
-      
+                    </div>
+                </div>
+            </div>
+            <!-- // .col-md-12 -->
+        </div>
+        <div class="herofade beige-dk"></div>
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/">Ruby on Rails</a></li></ul>
-	</div>
+</section>
 
-      
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<!-- ============================ END Hero Image =========================== -->
 
 
 
+<!-- ============================ Content =========================== -->
 
-
-
-
-  
-    <article id="post-Rails/Rails开始" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/10/11/Rails/Rails开始/" class="article-date">
-  	<time datetime="2015-10-10T17:52:05.000Z" itemprop="datePublished">2015-10-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+<section id="intro">
+    <div class="container">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/11/Rails/Rails开始/">Rails开始</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="创建命令"><a href="#创建命令" class="headerlink" title="创建命令"></a>创建命令</h3><pre><code>Rails new blog --skip-bundle
-</code></pre><blockquote>
-<p>gem 修改为taobao源<br><strong>项目Gemfile</strong></p>
-</blockquote>
-<pre><code>source https://ruby.taobao.org
-</code></pre><blockquote>
-<p>然后 </p>
-</blockquote>
-<pre><code>bundle install
-</code></pre><p><strong>启动Rails服务</strong></p>
-<pre><code>rails server
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/">Ruby on Rails</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Rails/Rails 资源" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/10/11/Rails/Rails 资源/" class="article-date">
-  	<time datetime="2015-10-10T17:42:32.000Z" itemprop="datePublished">2015-10-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2015/11/22/PHP/安装LNMP提示 proc_open错误/">安装LNMP提示 proc_open错误</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-11-21T20:02:13.000Z" itemprop="datePublished">
+          2015-11-22
+      </time>
     
     
-      <header class="article-header">
+    | 
+    <a href='/tags/Laravel/'>Laravel</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        安装LNMP提示 proc_open错误在lnmp环境下安装Laravel提示错误​1The Process class relies on proc_open, which is not available on your PHP installation.
+到 /usr/local/php/etc/php.ini 寻找 disable_functions 字段 然后删除 scandir 字段即可 
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2015/11/22/PHP/安装LNMP提示 proc_open错误/">详细...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/11/Rails/Rails 资源/">Rails 资源</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Rails-资源"><a href="#Rails-资源" class="headerlink" title="Rails 资源"></a>Rails 资源</h3><h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a><strong>资源</strong></h2><p><em>创建资源</em></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails generate controller posts index show create new</span><br></pre></td></tr></table></figure>
-<p>创建一个posts控制器</p>
-<p>分别创建 index、show、create、new四种行为</p>
-<p><em>删除资源</em></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails destroy controller posts</span><br></pre></td></tr></table></figure>
-<p>然后在<code>config/routs.rb</code>文件里面给<code>posts</code>相关的资源删除即可完整的删除一个controller</p>
-<p><em>修改默认访问主页</em></p>
-<blockquote>
-<p>在项目目录的config目录里面修改<code>ruotes.rb</code>文件</p>
-</blockquote>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root <span class="string">"posts#index"</span></span><br></pre></td></tr></table></figure>
-<p><em>查看工程路由</em></p>
-<p>除了在工程文件<code>config/routes.rb</code>里面查看，还可以使用命令</p>
-<pre><code>rake routes
-</code></pre><p><strong>简写routes</strong></p>
-<p>可以在<code>config/routes.rb</code>里面简写</p>
-<pre><code>resources &apos;posts&apos;
-</code></pre><p>这样RESTFull七种请求方式都已经具备了</p>
-<p><strong>创建完整的scanfocll</strong></p>
-<pre><code>rails generate scaffold Post content:text
-</code></pre><p>就完整的创建了一个<code>posts</code>资源</p>
-<ul>
-<li>创建<code>scanffold</code>与<code>controller</code>的区别在于<code>posts</code>使用的是首字母大写的单数</li>
-<li><code>scanffold</code>命令后面可以接上模型名称</li>
-</ul>
-<p><strong>数据迁移</strong></p>
-<pre><code>bundle exec rake db:migrate
-</code></pre><blockquote>
-<p>这一步是必须的</p>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/">Ruby on Rails</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Rails/Rails 路由" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/10/11/Rails/Rails 路由/" class="article-date">
-  	<time datetime="2015-10-10T17:36:26.000Z" itemprop="datePublished">2015-10-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2015/10/11/Rails/Rails 数据交互/">Rails 数据交互</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-10-10T19:44:25.000Z" itemprop="datePublished">
+          2015-10-11
+      </time>
     
     
-      <header class="article-header">
+    | 
+    <a href='/tags/Ruby-on-Rails/'>Ruby on Rails</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Rails 数据交互ActiveRecord创建模型
+1rails generate model user userName:string email:string
+
+创建的model使用的是单数 而创建 controller 则用复数
+
+迁移数据
+1rake db:migrate
+进入控制台 rails console
+1@user = User.new(:userName =&gt; 'Hu.Shihuan', :email =&g
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2015/10/11/Rails/Rails 数据交互/">详细...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/11/Rails/Rails 路由/">Rails 资源</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Rails-路由"><a href="#Rails-路由" class="headerlink" title="Rails 路由"></a>Rails 路由</h3><p><strong>排除路由控制器</strong></p>
-<p><code>config/routes.rb</code>文件 修改</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resources <span class="symbol">:posts</span>, <span class="symbol">:excepet</span> =&gt; <span class="symbol">:show</span></span><br></pre></td></tr></table></figure>
-<p><strong>常用路由写法</strong></p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get <span class="string">'posts/:id'</span>, <span class="symbol">:to</span> =&gt; <span class="string">'posts#show'</span></span><br></pre></td></tr></table></figure>
-<p>简单的<code>Get</code> 请求</p>
-<p><strong>小试一下</strong></p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;%= link_to <span class="string">'测试一'</span>,&#123;<span class="symbol">:controller</span> =&gt; <span class="string">'posts'</span>, <span class="symbol">:action</span> =&gt; <span class="string">'show'</span>, <span class="symbol">:id</span> =&gt; <span class="number">1</span> &#125; %&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>命名路由</strong></p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get <span class="string">'post/:id'</span>, <span class="symbol">:to</span> =&gt; <span class="string">'posts:show'</span>, <span class="symbol">:as</span> =&gt; <span class="string">'show_post'</span></span><br></pre></td></tr></table></figure>
-<p><strong>小试一下</strong></p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;%= link_to <span class="string">'测试一'</span>, show_post_path %&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>集合路由</strong></p>
-<p><code>config/routes.rb</code>文件 修改</p>
-<ul>
-<li>方式一</li>
-</ul>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resources <span class="symbol">:posts</span> <span class="keyword">do</span></span><br><span class="line">    get <span class="string">'recent'</span> <span class="symbol">:on</span> =&gt; <span class="symbol">:collection</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>方式二 <code>这种方式更为简洁</code></li>
-</ul>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">resources <span class="symbol">:posts</span> <span class="keyword">do</span></span><br><span class="line">    collection on</span><br><span class="line">        get <span class="string">'recent'</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<p><strong>成员路由</strong></p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">resources <span class="symbol">:posts</span> <span class="keyword">do</span></span><br><span class="line">    member <span class="keyword">do</span></span><br><span class="line">        get <span class="string">'recent'</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/">Ruby on Rails</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-前端/jQuery在Firefox不支持background-position-x解决办法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/09/18/前端/jQuery在Firefox不支持background-position-x解决办法/" class="article-date">
-  	<time datetime="2015-09-18T03:12:46.000Z" itemprop="datePublished">2015-09-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2015/10/11/Rails/Rails开始/">Rails开始</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-10-10T17:52:05.000Z" itemprop="datePublished">
+          2015-10-11
+      </time>
     
     
-      <header class="article-header">
+    | 
+    <a href='/tags/Ruby-on-Rails/'>Ruby on Rails</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        创建命令Rails new blog --skip-bundle
+
+gem 修改为taobao源项目Gemfile
+
+source https://ruby.taobao.org
+
+然后 
+
+bundle install
+启动Rails服务
+rails server
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2015/10/11/Rails/Rails开始/">详细...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/18/前端/jQuery在Firefox不支持background-position-x解决办法/">jQuery在Firefox不支持background-position-x解决办法</a>
-    </h1>
-  
-
-      </header>
-      
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2015/10/11/Rails/Rails 资源/">Rails 资源</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-10-10T17:42:32.000Z" itemprop="datePublished">
+          2015-10-11
+      </time>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="jQuery在Firefox不支持background-position-x解决办法"><a href="#jQuery在Firefox不支持background-position-x解决办法" class="headerlink" title="jQuery在Firefox不支持background-position-x解决办法"></a>jQuery在Firefox不支持background-position-x解决办法</h3><p>原因很简单</p>
-<p>Firefox不支持类似于”backgroun-position-x,backgroun-position-y” 这样的属性</p>
-<p>解决办法也比较简单</p>
-<p>可以用 jquery-browser-plugin 判断浏览器</p>
-<p><a href="https://github.com/gabceb/jquery-browser-plugin" target="_blank" rel="noopener">https://github.com/gabceb/jquery-browser-plugin</a></p>
-<p>然后</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($.browser.mozilla)&#123;</span><br><span class="line">    $(elem).css(&#123;</span><br><span class="line">        <span class="string">"background-position"</span>:<span class="string">"center center"</span>,</span><br><span class="line">        <span class="string">"-moz-transition"</span>: <span class="string">"all 500ms ease"</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    $(elem).stop(<span class="literal">true</span>).animate(&#123;</span><br><span class="line">        <span class="string">"background-position-x"</span>:<span class="string">"-73px"</span>,</span><br><span class="line">        <span class="string">"background-position-y"</span>:<span class="string">"0px"</span></span><br><span class="line">    &#125;,<span class="number">300</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+    | 
+    <a href='/tags/Ruby-on-Rails/'>Ruby on Rails</a>
     
-  </div>
-  
-</article>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Rails 资源资源创建资源
+1rails generate controller posts index show create new
+创建一个posts控制器
+分别创建 index、show、create、new四种行为
+删除资源
+1rails destroy controller posts
+然后在config/routs.rb文件里面给posts相关的资源删除即可完整的删除一个controller
+修改默认访问主页
 
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
-  
-</div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2020 John Doe
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+在项目目
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2015/10/11/Rails/Rails 资源/">详细...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2015/10/11/Rails/Rails 路由/">Rails 资源</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-10-10T17:36:26.000Z" itemprop="datePublished">
+          2015-10-11
+      </time>
+    
+    
+    | 
+    <a href='/tags/Ruby-on-Rails/'>Ruby on Rails</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Rails 路由排除路由控制器
+config/routes.rb文件 修改
+1resources :posts, :excepet =&gt; :show
+常用路由写法
+1get 'posts/:id', :to =&gt; 'posts#show'
+简单的Get 请求
+小试一下
+12&lt;%= link_to '测试一',&#123;:controller =&gt; 'posts', :action =&gt; 'show', :
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2015/10/11/Rails/Rails 路由/">详细...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2015/09/18/前端/jQuery在Firefox不支持background-position-x解决办法/">jQuery在Firefox不支持background-position-x解决办法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2015-09-18T03:12:46.000Z" itemprop="datePublished">
+          2015-09-18
+      </time>
+    
+    
+    | 
+    <a href='/tags/前端/'>前端</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        jQuery在Firefox不支持background-position-x解决办法原因很简单
+Firefox不支持类似于”backgroun-position-x,backgroun-position-y” 这样的属性
+解决办法也比较简单
+可以用 jquery-browser-plugin 判断浏览器
+https://github.com/gabceb/jquery-browser-plugin
+然后
+1234567891011if(
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2015/09/18/前端/jQuery在Firefox不支持background-position-x解决办法/">详细...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <nav class="pagination" role="pagination">
+          <a class="pull-left" href="/">← Newer Posts</a>
+          
+        </nav>
     </div>
-  </div>
+</section>
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p></p>
+        </div>
+    </div>
+</section>
+<!-- ============================ END Content =========================== -->
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/hxfsc" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/hxfsc" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
 </footer>
-    </div>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
 </script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script src="/js/main.js"></script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
 
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25285383-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-25285383-1');
-</script>
-
-
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
 </script>
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
-  </div>
 </body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-25285383-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </html>
