@@ -114,16 +114,16 @@ $(function() {
       }
 
       console.log(option.text);
-      var _html = "<div class=\"modal " + _color + "\" id=\"" + _opel + "\">"
-                +  "<style type=\"text/css\">"
+      var _html = "<div class="\"modal" " + _color "\" id="\""" _opel>"
+                +  "<style type="\"text/css\"">"
                 +  "#"+_opel +"{ top:50px; width:30%;};"
                 +   "</style>"
-                +  "<div class=\"modal-content\">"
+                +  "<div class="\"modal-content\"">"
                 +    "<p>" + option.text+ "</p>"
                 +  "</div>"
-                +  "<div class=\"modal-footer "+ _color +" lighten-4\">"
-                +    "<a href=\"javascript:void(0);\" class=\"waves-effect waves-red btn-flat modal-action modal-close\" id=\"modal_close\">关闭</a>"
-                +    ((_confirmBtn == true) ? "<a href=\"#\" class=\"waves-effect waves-red btn-flat modal-action\" id=\"modal_confirm\">确认</a>" : "")
+                +  "<div class="\"modal-footer" "+ _color +" lighten-4\">"
+                +    "<a href="\"javascript:void(0);\"" class="\"waves-effect" waves-red btn-flat modal-action modal-close\" id="\"modal_close\"">关闭</a>"
+                +    ((_confirmBtn == true) ? "<a href="\"#\"" class="\"waves-effect" waves-red btn-flat modal-action\" id="\"modal_confirm\"">确认</a>" : "")
                 +  "</div>"
                 +"</div>";
       if($("#"+_opel).length > 0){
@@ -197,7 +197,7 @@ $(function() {
       }
 
 
-      var _html = "<span style=\"padding-right:20px; display:inline-block;\" class=\"new badge " + _color + " darken-3\" id=\"" + _opel + "\">" + option.text + "<label style=\"position:absolute; right:0;top:1px;padding-left: 3px;padding-right: 3px;margin-left: 5px; left:inherit; font-size:11px; cursor: pointer;\">✕</label></span>";
+      var _html = "<span style="\"padding-right:20px;" display:inline-block;\" class="\"new" badge " + _color darken-3\" id="\""" _opel "\">" + option.text + "<label style="\"position:absolute;" right:0;top:1px;padding-left: 3px;padding-right: 3px;margin-left: 5px; left:inherit; font-size:11px; cursor: pointer;\">✕</label></span>";
       if($("#"+_opel).length > 0){
         $("#"+_opel).remove();
       }

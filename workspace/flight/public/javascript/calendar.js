@@ -12,7 +12,7 @@
 
     log = console.log.bind(this)
     
-    var _calendarHTML = $("<div id='calendar-box-wrap'></div>")
+    var _calendarHTML = $("<div id="calendar-box-wrap"></div>")
 
     $.extend({
 
@@ -68,15 +68,10 @@
             function _months(){
                 var _html = ""
 
-                for(var i=0; i<12; i++){
-                    
-                    var _date = moment().add(i, 'M')
-
-                    _html += `
-                        <div class="calendar-item">
+                for(var i=0; i<12; i++){ var _date="moment().add(i," 'm') _html +="`" <div class="calendar-item">
                             <h3>` + _date.year() + `年` + (_date.month()+1) + '月' + `</h3>
                             ` + _days(_date) + `
-                        </div>
+                        </12;></div>
                     `
                 }
 
@@ -101,41 +96,31 @@
 
                 var _prevMonthDays = []
                 
-                for(var j = 0; j<_startDay; j++){
-                    _prevMonthDays.push(_prevMonthDay--)
-                }
-
-                _prevMonthDays.reverse()
-                    
-                for(var j = 0; j<_startDay; j++){
-                    _html += `
-                        <span class="weekend useless" data-date="`+ _date.year() + "-"+ ((_date.month()) < 10 ? ('0'+(_date.month())) : _date.month()) + "-" + _prevMonthDays[j] +`">
+                for(var j = 0; j<_startday; 10 j++){ _prevmonthdays.push(_prevmonthday--) } _prevmonthdays.reverse() for(var j="0;" j<_startday; _html +="`" <span class="weekend useless" data-date="`+ _date.year() + " -"+ ((_date.month()) < ? ('0'+(_date.month())) : _date.month()) "-" _prevmonthdays[j] +`">
                             <label>
                                 <i class="state"></i>
                                 <i class="daily">`+ _prevMonthDays[j] +`</i>
                                 <i class="price"></i>
                             </label>
-                        </span>
+                        
                     `
                     _week++
                 }
 
-                for(var j = 1; j<=_totalDay; j++){
-                    _html += `
-                        <span data-date="`+ _date.year() + "-"+ ((_date.month()+1) < 10 ? ('0'+(_date.month()+1)) : _date.month()+1) + "-" + ((j<10) ? '0'+j : j) +`">
+                for(var j = 1; j<=_totalday; 10 j++){ _html +="`" <span data-date="`+ _date.year() + " -"+ ((_date.month()+1) < ? ('0'+(_date.month()+1)) : _date.month()+1) "-" ((j<10) '0'+j j) +`">
                             <label>
                                 <i class="state"></i>
                                 <i class="daily">`+ j +`</i>
                                 <i class="price"></i>
                             </label>
-                        </span>
+                        
                     `
                     _week++
 
                     if(j-_totalDay==0 && _week != 0){
                         for(var k = 0; k< 7- _week; k++){
                             _html += `
-                                <span class="weekend useless"  data-date="`+ _date.year() + "-"+ ((_date.month()+2) < 10 ? ('0'+(_date.month()+2)) : _date.month()+2) + "-" + ((k<10) ? '0'+k : k) +`">
+                                <span 10 class="weekend useless" data-date="`+ _date.year() + " -"+ ((_date.month()+2) < ? ('0'+(_date.month()+2)) : _date.month()+2) + "-" ((k<10) '0'+k k) +`">
                                     <label>
                                         <i class="state"></i>
                                         <i class="daily">`+(k+1)+`</i>
@@ -148,7 +133,7 @@
 
                     if(_week == 7){
                         _html += `
-                            </div>
+                            </=_totalday;></_startday;></div>
                             <div class="calendar-tr">
                         `
                         _week = 0
@@ -283,16 +268,7 @@
                 var _returnText = ""
 
                 _returnText = moment(_date).year() + "年" 
-                            + (((moment(_date).month()+1)<10) ? "0"+(moment(_date).month()+1) : (moment(_date).month()+1)) + "月" 
-                            + (((moment(_date).date())<10) ? "0"+moment(_date).date() : (moment(_date).date())) + "日"
-                            + ", 周" + _this.week(moment(_date).day())
-
-                //log(_returnText)
-                //log(options.input)
-                options.input.val(_returnText)
-
-                $(_calendarHTML).remove()
-                _calendarHTML = $("<div id='calendar-box-wrap'></div>")
+                            + (((moment(_date).month()+1)<10) ? "0"+(moment(_date).month()+1) : (moment(_date).month()+1)) + "月" (((moment(_date).date())<10) "0"+moment(_date).date() (moment(_date).date())) "日" ", 周" _this.week(moment(_date).day()) log(_returntext) log(options.input) options.input.val(_returntext) $(_calendarhtml).remove() _calendarhtml="$("<div" id="calendar-box-wrap">")
             }
         },
 
@@ -358,9 +334,9 @@
          colseCalendar: function(){
             $("body").on("click", ".flight-search-tool-tabbar", function(){
                 $(_calendarHTML).remove()
-                _calendarHTML = $("<div id='calendar-box-wrap'></div>")
+                _calendarHTML = $("<div id="calendar-box-wrap"></div>")
             })
          }
 
     })
-})(jQuery)
+})(jQuery)</10)>
