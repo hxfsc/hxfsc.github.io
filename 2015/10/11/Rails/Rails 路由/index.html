@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Rails 资源 | JavaScript,Ruby,Ruby on Rails blog</title>
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+
+  <meta name="generator" content="JavaScript,Ruby,Ruby on Rails blog">
+
+  
+  
+  
+
+  
+</head>
+
+
+<body class="post-template">
+
+  <header class="site-head"  style="background-image: url(/img/bg_img2.png)" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+            
+            <h1 class="blog-title">JavaScript,Ruby,Ruby on Rails blog</h1>
+            <h2 class="blog-description"></h2>
+        </div>
+    </div>
+</header>
+  
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2015-10-10T17:36:26.000Z" itemprop="datePublished">
+          2015-10-11
+      </time>
+    
+    
+    | 
+    <a href='/tags/Ruby-on-Rails/'>Ruby on Rails</a>
+    
+    
+</span>
+    <h1 class="post-title">Rails 资源</h1>
+    <section class="post-content">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1425587573370649"
+            crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+            style="display:block; text-align:center;"
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-1425587573370649"
+            data-ad-slot="4480339517"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      <h3 id="Rails-路由"><a href="#Rails-路由" class="headerlink" title="Rails 路由"></a>Rails 路由</h3><p><strong>排除路由控制器</strong></p>
+<p><code>config/routes.rb</code>文件 修改</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resources <span class="symbol">:posts</span>, <span class="symbol">:excepet</span> =&gt; <span class="symbol">:show</span></span><br></pre></td></tr></table></figure>
+<p><strong>常用路由写法</strong></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get <span class="string">'posts/:id'</span>, <span class="symbol">:to</span> =&gt; <span class="string">'posts#show'</span></span><br></pre></td></tr></table></figure>
+<p>简单的<code>Get</code> 请求</p>
+<p><strong>小试一下</strong></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;%= link_to <span class="string">'测试一'</span>,&#123;<span class="symbol">:controller</span> =&gt; <span class="string">'posts'</span>, <span class="symbol">:action</span> =&gt; <span class="string">'show'</span>, <span class="symbol">:id</span> =&gt; <span class="number">1</span> &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>命名路由</strong></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get <span class="string">'post/:id'</span>, <span class="symbol">:to</span> =&gt; <span class="string">'posts:show'</span>, <span class="symbol">:as</span> =&gt; <span class="string">'show_post'</span></span><br></pre></td></tr></table></figure>
+<p><strong>小试一下</strong></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;%= link_to <span class="string">'测试一'</span>, show_post_path %&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>集合路由</strong></p>
+<p><code>config/routes.rb</code>文件 修改</p>
+<ul>
+<li>方式一</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resources <span class="symbol">:posts</span> <span class="keyword">do</span></span><br><span class="line">    get <span class="string">'recent'</span> <span class="symbol">:on</span> =&gt; <span class="symbol">:collection</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>方式二 <code>这种方式更为简洁</code></li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">resources <span class="symbol">:posts</span> <span class="keyword">do</span></span><br><span class="line">    collection on</span><br><span class="line">        get <span class="string">'recent'</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p><strong>成员路由</strong></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">resources <span class="symbol">:posts</span> <span class="keyword">do</span></span><br><span class="line">    member <span class="keyword">do</span></span><br><span class="line">        get <span class="string">'recent'</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>hxfsc</h4>
+    <p></p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?url=https://hxfsc.com/2015/10/11/Rails/Rails 路由/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://hxfsc.com/2015/10/11/Rails/Rails 路由/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=https://hxfsc.com/2015/10/11/Rails/Rails 路由/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <a class="newer-posts" href="/2015/10/11/Rails/Rails 资源/">
+        ← Rails 资源
+    </a>
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2015/09/18/前端/jQuery在Firefox不支持background-position-x解决办法/">
+        jQuery在Firefox不支持background-position-x解决办法 →
+    </a>
+    
+</nav>
+  <div id="comment" class="comments-area">
+    <h1 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h1>
+
+    
+</div>
+</main>
+
+
+  
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">JavaScript,Ruby,Ruby on Rails blog</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>JavaScript,Ruby,Ruby on Rails blog</title>
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+
+  <meta name="generator" content="JavaScript,Ruby,Ruby on Rails blog">
+
+  
+  
+  
+
+  
+</head>
+
+
+<body class="post-template">
+
+  <header class="site-head"  style="background-image: url(/img/bg_img2.png)" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+            
+            <h1 class="blog-title">JavaScript,Ruby,Ruby on Rails blog</h1>
+            <h2 class="blog-description"></h2>
+        </div>
+    </div>
+</header>
+  
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2018-04-26T01:53:47.180Z" itemprop="datePublished">
+          2018-04-26
+      </time>
+    
+</span>
+    <h1 class="post-title"></h1>
+    <section class="post-content">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1425587573370649"
+            crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+            style="display:block; text-align:center;"
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-1425587573370649"
+            data-ad-slot="4480339517"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      <!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <title>常用乘机人空白页面</title>
+</head>
+<body>
+
+    <div class="app">
+        <style type="text/css">
+            html, body{
+                background: #FFF;
+            }
+        </style>
+        <div class="flight-search-tool-tabbar">
+            <i class="arrow left"></i>
+            <div class="chioce-search-input-wrap flight-tabbar-info">
+                <span class="form">编辑信息</span>
+            </div>
+        </div>
+        
+        <div class="riding-person-splitbar"></div>
+        <div class="riding-person-edit-wrap">
+            <div class="riding-person-edit-item sfz">
+                <span>姓名</span>
+                <input type="text" placeholder="与证件一致">
+            </div>
+
+            <div class="riding-person-edit-item hz">
+                <span>姓（拼音）</span>
+                <input type="text" placeholder="如：ZHANG">
+            </div>
+
+            <div class="riding-person-edit-item hz">
+                <span>名（拼音）</span>
+                <input type="text" placeholder="如：XIAOMING">
+            </div>
+
+            <div class="riding-person-edit-item is-show">
+                <span>
+                    <label class="identity">
+                        <strong>身份证</strong>
+                    </label>
+                </span>
+                <input type="text" placeholder="18位身份证号">
+            </div>
+
+            <div class="riding-person-edit-item hz">
+                <span>国籍</span>
+                <input type="text" value="中国">
+            </div>
+            
+            <div class="riding-person-edit-item hz">
+                <span>生日</span>
+                <input type="text" value="1990-06-22">
+            </div>
+
+            <div class="riding-person-edit-item hz">
+                <span>性别</span>
+                <div>
+                    <label><input type="radio" name="sex" checked><i></i>男</label>
+                    <label><input type="radio" name="sex"><i></i>女</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="riding-person-edit-save">
+            <button>保存</button>
+        </div>
+        
+    </div>
+
+    <div class="dialog"></div>
+    <div class="riding-person-dialog-wrap">
+        <ul>
+            <li class="active">身份证</li>
+            <li>护照</li>
+        </ul>
+    </div>
+    
+
+</body>
+<script type="text/javascript" src="../public/javascript/jquery.js"></script>
+<script type="text/javascript" src="./public/javascript/fastclick.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        FastClick.attach(document.body)
+
+        $(".dialog").css({
+            width: $(window).width(),
+            height: $(window).height() > $("body").height() ? $(window).height() + 50 : $("body").height() + 50
+        })
+
+
+        $(".identity").on("click", function(){
+            $(".dialog, .riding-person-dialog-wrap").fadeIn('fast')
+        })
+
+        $(".riding-person-dialog-wrap li").on("click", function(){
+            var $_ridingPersonDialogText = $(this).text()
+            $(this).addClass("active").siblings().removeClass("active")
+            if($_ridingPersonDialogText!=''){
+                $(".identity")
+                    .find("strong")
+                    .text($_ridingPersonDialogText)
+                    .end()
+                    .parent()
+                    .next("input")
+                    .prop("placeholder", $_ridingPersonDialogText == "身份证" ? "18位身份证号" : "与证件一致")
+                    .val("")
+                
+                if($_ridingPersonDialogText == "身份证"){
+                    $(".riding-person-edit-item:not('.is-show')").css("display", "none")
+                    $(".sfz").css("display","flex")
+                }else{
+                    $(".riding-person-edit-item:not('.is-show')").css("display", "none")
+                    $(".hz").css("display", "flex")
+                }   
+            }
+
+            $(".dialog, .riding-person-dialog-wrap").fadeOut('fast')
+        })
+
+
+    })
+</script>
+</html>
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>hxfsc</h4>
+    <p></p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?url=https://hxfsc.com/workspace/flight/riding-person-edit.html"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://hxfsc.com/workspace/flight/riding-person-edit.html"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=https://hxfsc.com/workspace/flight/riding-person-edit.html"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <span class="page-number">•</span>
+    
+</nav>
+  <div id="comment" class="comments-area">
+    <h1 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h1>
+
+    
+</div>
+</main>
+
+
+  
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">JavaScript,Ruby,Ruby on Rails blog</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+
+
+
+
+
+
+</body>
+</html>

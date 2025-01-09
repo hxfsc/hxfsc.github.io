@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Webpack 配置 | JavaScript,Ruby,Ruby on Rails blog</title>
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+
+  <meta name="generator" content="JavaScript,Ruby,Ruby on Rails blog">
+
+  
+  
+  
+
+  
+</head>
+
+
+<body class="post-template">
+
+  <header class="site-head"  style="background-image: url(/img/bg_img2.png)" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+            
+            <h1 class="blog-title">JavaScript,Ruby,Ruby on Rails blog</h1>
+            <h2 class="blog-description"></h2>
+        </div>
+    </div>
+</header>
+  
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2016-03-11T07:02:40.000Z" itemprop="datePublished">
+          2016-03-11
+      </time>
+    
+    
+    | 
+    <a href='/tags/前端-前端工程/'>前端, 前端工程</a>
+    
+    
+</span>
+    <h1 class="post-title">Webpack 配置</h1>
+    <section class="post-content">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1425587573370649"
+            crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+            style="display:block; text-align:center;"
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-1425587573370649"
+            data-ad-slot="4480339517"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      <h1 id="Webpack-配置"><a href="#Webpack-配置" class="headerlink" title="Webpack 配置"></a>Webpack 配置</h1><h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cnpm install css-loader style-loader sass-loader node-sass --save-dev</span><br><span class="line">cnpm install postcss-loader</span><br><span class="line">cnpm install autoprefixer-loader</span><br><span class="line">cnpm install precss-loader</span><br><span class="line">cnpm install babel-loader --save-dev</span><br><span class="line">cnpm install babel-preset-es2015 babel-preset-react --save-dev</span><br><span class="line">cnpm install react react-dom --save</span><br><span class="line">cnpm install bootstrap@<span class="number">4.0</span><span class="number">.0</span>-alpha<span class="number">.2</span> --save-dev</span><br><span class="line">cnpm install url-loader --save-dev</span><br><span class="line">cnpm install extract-text-webpack-plugin --save</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="webpack-config-js"><a href="#webpack-config-js" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</span><br><span class="line"><span class="keyword">var</span> ExtractTextPlugin = <span class="built_in">require</span>(<span class="string">"extract-text-webpack-plugin"</span>);  <span class="comment">//分离Style</span></span><br><span class="line"><span class="keyword">var</span> autoprefixer = <span class="built_in">require</span>(<span class="string">'autoprefixer'</span>);</span><br><span class="line"><span class="keyword">var</span> precss = <span class="built_in">require</span>(<span class="string">'precss'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//当前项目地址</span></span><br><span class="line"><span class="keyword">var</span> ROOT_PATH = path.resolve(__dirname);</span><br><span class="line"><span class="comment">//开发目录</span></span><br><span class="line"><span class="keyword">var</span> APP_PATH = path.resolve(ROOT_PATH, <span class="string">'./src'</span>);</span><br><span class="line"><span class="comment">//生成目录</span></span><br><span class="line"><span class="keyword">var</span> BUILD_PATH = path.resolve(ROOT_PATH, <span class="string">'./build'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: &#123;</span><br><span class="line">        app: path.resolve(APP_PATH, <span class="string">'./index.js'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: BUILD_PATH,</span><br><span class="line">        filename: <span class="string">'bundle.js'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    devtool: <span class="string">"eval-source-map"</span>,</span><br><span class="line">    <span class="built_in">module</span>: &#123;</span><br><span class="line">        loaders:[&#123;</span><br><span class="line">                <span class="comment">//处理SCSS</span></span><br><span class="line">                test: <span class="regexp">/\.scss$/</span>,</span><br><span class="line">                loader: ExtractTextPlugin.extract(<span class="string">"style-loader"</span>, <span class="string">"css-loader!sass-loader!postcss-loader"</span>),</span><br><span class="line">                include: APP_PATH</span><br><span class="line">            &#125;,&#123;</span><br><span class="line">                <span class="comment">//处理JSX</span></span><br><span class="line">                test: <span class="regexp">/\.jsx?$/</span>,</span><br><span class="line">                loader: <span class="string">'babel'</span>,</span><br><span class="line">                include: APP_PATH,</span><br><span class="line">                query: &#123;</span><br><span class="line">                    presets: [<span class="string">'es2015'</span>, <span class="string">'react'</span>]</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,&#123;    </span><br><span class="line">                test: <span class="regexp">/\.(png|jpg)$/</span>,    </span><br><span class="line">                loader: <span class="string">'url?limit=400000'</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    postcss: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> [autoprefixer, precss];</span><br><span class="line">    &#125;,</span><br><span class="line">    resolve: &#123;</span><br><span class="line">        extensions: [<span class="string">''</span>, <span class="string">'.js'</span>, <span class="string">'.jsx'</span>, <span class="string">'.scss'</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [<span class="keyword">new</span> ExtractTextPlugin(<span class="string">'css.css'</span>)]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="运行webpack"><a href="#运行webpack" class="headerlink" title="运行webpack"></a>运行webpack</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo webpack</span><br></pre></td></tr></table></figure>
+<h3 id="监控webpack"><a href="#监控webpack" class="headerlink" title="监控webpack"></a>监控webpack</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo webpack -w</span><br></pre></td></tr></table></figure>
+<h3 id="压缩JavaScript"><a href="#压缩JavaScript" class="headerlink" title="压缩JavaScript"></a>压缩JavaScript</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo webpack -p</span><br></pre></td></tr></table></figure>
+
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>hxfsc</h4>
+    <p></p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?url=https://hxfsc.com/2016/03/11/前端/Webpack 配置/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://hxfsc.com/2016/03/11/前端/Webpack 配置/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=https://hxfsc.com/2016/03/11/前端/Webpack 配置/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <a class="newer-posts" href="/2017/04/10/前端/React相关/">
+        ← React 相关
+    </a>
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2016/01/01/前端/Object/">
+        JavaScript 对象 →
+    </a>
+    
+</nav>
+  <div id="comment" class="comments-area">
+    <h1 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h1>
+
+    
+</div>
+</main>
+
+
+  
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">JavaScript,Ruby,Ruby on Rails blog</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+
+
+
+
+
+
+</body>
+</html>
